@@ -31,7 +31,7 @@
           <div class="nav-collapse collapse pull-right">
             <ul class="nav" id="titlemenu">
               <li><a href="#about">Login</a></li>
-              <li><a href="contact.php">Contact</a></li>
+              <li class="active"><a href="contact.php">Contact</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -39,17 +39,39 @@
     </div>
 
     <div class="container">
-    	<form class="form-search">
-		    <div style="margin-top:10%; margin-left:30%" class="input-append">
-		        <input type="text" placeholder="What do you want to be?" class="span4 search-query">
-		        <button type="submit" class="btn">Search</button>
-		    </div>
-		</form>
-    	<div class="bannerbottom">
-    		<p><center style="margin-bottom:10px"><a href="#">Filter Results</a></center></a></p>
-    	</div> 
     	<!-- /container -->
-	</div>
+    	<div class="span12">
+            <div class="page-header">
+                    <h2>Send us a message</h2>
+            </div>
+            <p>Let us know what you think! Just give us a few details about yourself first.</p>
+            <form method="post" action="">
+                    <fieldset>
+                        <div class="clearfix">
+                            <label for="name"><span>Name:</span></label>
+                            <div class="input">
+                                <input tabindex="1" id="name" name="name" label="Name" type="text" value="">
+                            </div>
+                        </div>
+                        <div class="clearfix">
+                            <label for="email"><span>Email:</span></label>
+                            <div class="input">
+                        	    <input tabindex="2" id="email" name="email" label="Email" type="text" value="">
+                            </div>
+                        </div>
+                        <div class="clearfix">
+                            <label for="message"><span>Message:</span></label>
+                            <div class="input">
+                                <textarea tabindex="3" class="xxlarge" style="width:70%" id="message" name="body" label="Message" rows="7"></textarea>
+                            </div>
+                        </div>
+                        <div class="actions">
+                            <input tabindex="4" type="submit" class="btn primary large" value="Send message">
+                        </div>
+                    </fieldset>
+            </form>
+    </div>
+</div>
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -70,3 +92,4 @@
 </html>
 
 
+ 
