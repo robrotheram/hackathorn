@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="RepositorySelectionPage.UsedUris">
+		<item value="ssh://jamesalfei@github.com/robrotheram/hackathorn.git"/>
+		<item value="ssh://jamesalfei%40gmail.com@github.com/robrotheram/hackathorn.git"/>
+		<item value="ftp://jamesalfei%40gmail.com@github.com/robrotheram/hackathorn.git"/>
+	</list>
+</section>
