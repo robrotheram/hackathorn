@@ -82,9 +82,23 @@ $(document).ready(function(){
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="brand" href="index.html">YoYo</a>
+            <a class="brand" href="index.php">YoYo</a>
           <div class="nav-collapse collapse pull-right">
               <ul class="nav">
+
+                <li><a href="login.php">Home</a></li>
+                <li class="dropdown">
+                	<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                		Notifications 
+                		<b class="caret"></b>
+                	</a>
+                	<ul class="dropdown-menu">
+                		<li class="nav-header"> Messages </li>
+                		<li class="nav-header"> Opportunities </li>
+                		<li class="nav-header"> Shares </li>
+                	</ul>
+                </li>
+
                 <?php if($user ==null){?>
                 	<li><a href="login.html">Login</a></li>
                 <? }else{ ?> 
@@ -166,34 +180,96 @@ $(document).ready(function(){
           <input style="width:70%;height:100px;"id="disableInput" name="disable" type="text"></input>
         </div>
 
+		<div id="aboutmeInput" class="span12">
+          <label for="aboutmeInput">About Me:</label>        
+          <input style="width:70%;height:100px;"id="aboutmeInput" name="about" type="text"></input>
+        </div>
+        
+        
+        <div id="workexInput" class="span12">
+          <label for="workexInput">Work Experience:</label>        
+          <input style="width:70%;height:100px;"id="workexInput" name="workex" type="text"></input>
+        </div>
+        
+        <hr/>
+        <br/>
         <div id="qualificationInput" class="span12">
           <label for="qualificationInput">Qualifications:</label>        
           <input style="width:70%;height:100px;"id="qualificationInput" name="qualifications" type="text"></input>
         </div>
 
-         <div id="workexInput" class="span12">
-          <label for="workexInput">Work Experience:</label>        
-          <input style="width:70%;height:100px;"id="workexInput" name="workex" type="text"></input>
-        </div>
 
         <div id="hobbiesInput" class="span12">
           <label for="hobbiesInput">Hobbies or Interests:</label>        
           <input style="width:70%;height:100px;"id="hobbiesInput" name="hobbies" type="text"></input>
         </div>
 
-        <div id="aboutmeInput" class="span12">
-          <label for="aboutmeInput">About Me:</label>        
-          <input style="width:70%;height:100px;"id="aboutmeInput" name="about" type="text"></input>
-        </div>
+        
 
         <div id="submitInput" class="span12">
           <button>Submit</button>   
         </div>
+    	<div class="bannerbottom">
+    		<center>
+			<script type="text/javascript" src="http://www.reddit.com/static/button/button1.js"></script>
+			<script src="https://platform.linkedin.com/in.js" type="text/javascript"></script>
+			<script type="IN/Share" data-counter="right"></script>
+			<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.yoyoambition.com">Tweet</a>
+			</center>
+    	</div> 
 
     </div>
       
     
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script>
+(function ($, window, delay) {
+  // http://jsfiddle.net/AndreasPizsa/NzvKC/
+  var theTimer = 0;
+  var theElement = null;
+    var theLastPosition = {x:0,y:0};
+  $('[data-toggle]')
+    .closest('li')
+    .on('mouseenter', function (inEvent) {
+    if (theElement) theElement.removeClass('open');
+    window.clearTimeout(theTimer);
+    theElement = $(this);
+
+    theTimer = window.setTimeout(function () {
+      theElement.addClass('open');
+    }, delay);
+  })
+    .on('mousemove', function (inEvent) {
+        if(Math.abs(theLastPosition.x - inEvent.ScreenX) > 4 || 
+           Math.abs(theLastPosition.y - inEvent.ScreenY) > 4)
+        {
+            theLastPosition.x = inEvent.ScreenX;
+            theLastPosition.y = inEvent.ScreenY;
+            return;
+        }
+        
+    if (theElement.hasClass('open')) return;
+    window.clearTimeout(theTimer);
+    theTimer = window.setTimeout(function () {
+      theElement.addClass('open');
+    }, delay);
+  })
+    .on('mouseleave', function (inEvent) {
+    window.clearTimeout(theTimer);
+    theElement = $(this);
+    theTimer = window.setTimeout(function () {
+      theElement.removeClass('open');
+    }, delay);
+  });
+})(jQuery, window, 200); // 200 is the delay in milliseconds
+</script>
+	<script>
+		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+		if(!d.getElementById(id)){js=d.createElement(s);
+		js.id=id;js.src=p+'://platform.twitter.com/widgets.js';
+		fjs.parentNode.insertBefore(js,fjs);}}
+		(document, 'script', 'twitter-wjs');
+	</script>
 </body>
 </html>
