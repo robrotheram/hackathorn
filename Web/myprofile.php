@@ -71,10 +71,8 @@ $(document).ready(function(){
 	var sn = document.getElementById("sNameField").value;
 	var dob = document.getElementById("dobField").value;
 	var pc = document.getElementById("postcodeField").value;
-
-	var we = document.getElementById("workexInput").value;
-	var dis = document.getElementById("disableInput").value;
-	var ab = document.getElementById("aboutmeInput").value;
+	var wei = document.getElementById("workexInput").value;
+	var abi = document.getElementById("aboutmeInput").value;
 	var gender ="bi";
 	
 	if(document.getElementById('maleRadio').checked) {
@@ -83,12 +81,20 @@ $(document).ready(function(){
 		gender = "female";
 	}
 	
-	var sp = 'yes';
+	var spi = 'yes';
 	if(document.getElementById('supportYes').checked) {
-		sp = 'yes';
+		spi = 'yes';
 	}else{
-		sp = 'no';
+		spi = 'no';
 	}
+	
+	$.post("updateprofile.php",
+    {
+		dob:dob
+    },
+    function(data,status){
+    	alert(data);
+    });	
 	
 	alert('yesy');
 	

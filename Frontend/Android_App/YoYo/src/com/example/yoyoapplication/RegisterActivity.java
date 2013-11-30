@@ -25,6 +25,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class RegisterActivity extends Activity{
 	
@@ -35,6 +36,8 @@ public class RegisterActivity extends Activity{
 	String postcode;
 	String email;
 	String password;
+	
+	boolean success = false;
 	
 	ProgressDialog pDialog;
 	
@@ -103,6 +106,14 @@ public class RegisterActivity extends Activity{
 			// Check your log cat for JSON reponse
 			Log.d("All Items: ", json.toString());
 
+			try {
+				// Check if it were a success
+				
+				success = json.getString("success") != null ? true : false; 
+	
+			} catch (JSONException e) {
+				e.printStackTrace();
+			}
 			
 			return null;
 		}
@@ -113,6 +124,9 @@ public class RegisterActivity extends Activity{
 			
 			//Log.i("BLAAAARRRGGG", "Size of array is" + itemsList.size());
 			
+			if (success) {
+				Toast.makeText(getApplication(), "User created!", Toast.LENGTH_LONG).show();
+			}
 			
 		}
 	}
