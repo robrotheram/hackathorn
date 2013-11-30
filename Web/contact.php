@@ -29,7 +29,6 @@
           <a class="brand" href="index.html">YoYo</a>
           <div class="nav-collapse collapse pull-right">
             <ul class="nav">
-        			<li><a href="index.html">Home</a></li>
         			<li><a href="login.html">Login</a></li>
         			<li><a href="signup.html">Sign-Up</a></li>
         			<li class="active"><a href="contact.php">Contact</a></li>
