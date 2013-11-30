@@ -125,7 +125,6 @@ background-position:center;
 		
     	<div class="bannerbottom">
     		<center>
-    		<p><a href="tandc.html">Terms and Conditions</a></p>
 			<script type="text/javascript" src="http://www.reddit.com/static/button/button1.js"></script>
 			<script src="https://platform.linkedin.com/in.js" type="text/javascript"></script>
 			<script type="IN/Share" data-counter="right"></script>
