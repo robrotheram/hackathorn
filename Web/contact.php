@@ -62,14 +62,44 @@
                         <div class="clearfix">
                             <label for="message"><span>Message:</span></label>
                             <div class="input">
-                                <textarea tabindex="3" class="xxlarge" style="width:70%" id="message" name="body" label="Message" rows="7"></textarea>
+                                <textarea tabindex="3" class="xxlarge" style="width:70%" id="comments" name="body" label="Message" rows="7"></textarea>
                             </div>
                         </div>
                         <div class="actions">
-                            <input tabindex="4" type="submit" class="btn primary large" value="Send message">
+                            <input tabindex="4" href="completedmail.html" type="submit" id="submit" class="btn primary large" value="Send message">
                         </div>
                     </fieldset>
             </form>
+
+            <?php
+				if ($_POST['submit'])
+				{
+				  if(empty($_POST['name']) || empty($_POST['email']) || empty($_POST['comments']))
+				    { 
+				      $error = true;
+				    
+				    } else{
+
+				      $to = "leysh01@gmail.com";
+
+				      $name = trim($_POST['name']);
+				      $number = trim($_POST['number']);
+				      $email = trim($_POST['email']);
+				      $comments = trim($_POST['comments']);
+
+				      $subject = "Contact Form";
+
+				      $messages = "Name: $name \r\n Email: $email \r\n Comments: $comments";
+				      $headers = "From:" . $name;
+				      $mailsent = mail($to, $subject, $messages, $headers);
+
+				      if($mailsent){
+				        $sent = true;
+				        }
+				  }
+
+				}
+			?>
     </div>
 </div>
     <!-- Le javascript
