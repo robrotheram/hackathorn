@@ -62,15 +62,9 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="./jquery.js"></script>
     <script>
-
-    	$(document).ready(function(){
-    		$("#titlemenu li").click(function(){
-    			$("#titlemenu li").removeClass("active");
-    			$(this).addClass("active");
-    		});
-    	})
 		
 		$(document).ready(function() {
     		$( "#sortable,#sortable2" ).sortable({
