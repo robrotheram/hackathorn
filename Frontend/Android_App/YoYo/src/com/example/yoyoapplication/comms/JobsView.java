@@ -25,7 +25,7 @@ import android.widget.ListView;
 
 public class JobsView extends Activity {
 	
-ProgressDialog pDialog;
+	ProgressDialog pDialog;
 	
 	JSONParser jParser = new JSONParser();
 
