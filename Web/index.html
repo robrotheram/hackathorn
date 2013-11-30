@@ -15,6 +15,41 @@
         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
       }
     </style>
+	
+	<?php
+		function countryCityFromIP()
+		{
+			$ipAddr = $_SERVER['HTTP_X_FORWARDED_FOR'];
+			$url = "http://api.ipinfodb.com/v3/ip-city/?key=5cfaab6c5af420b7b0f88d289571b990763e37b66761b2f053246f9db07ca913&ip=".$ipAddr."&format=json";
+			$d = file_get_contents($url);
+			return json_decode($d , true);
+		}
+			$ip = countryCityFromIP();
+			$loc =  $ip['cityName'];
+		  
+		
+	?>
+	<script>
+	$(document).ready(function(){
+		$("button").click(function(){
+		var un = document.getElementById("search").value;
+		$.post("aggregate_search.php",
+		{
+		  keyword:un,
+		  location:<?echo $loc ?> 
+		},
+		alert(un);
+		});
+	});
+	$js = $_POST['json-ouput'];
+	</script>
+	
+	
+	
+	
+	
+	
+	
   </head>
 
   <body background="logo1.png" style="background-repeat: no-repeat">
@@ -43,10 +78,11 @@
 
     <div class="container">
     	
-		<form action="results.php" method="POST">
+		
+		
 		    <div style="margin-top:10%; margin-left:12%" class="input-append">
-		        <input name="search" type="text" placeholder="What do you want to be?" class="span8"/>
-		        <input type="submit" value="Submit">
+		        <input id="search" name="search" type="text" placeholder="What do you want to be?" class="span8"/>
+		        <button class="btn">Submit</button>
 		    </div>
 		</form>
 

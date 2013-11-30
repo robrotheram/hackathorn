@@ -40,6 +40,7 @@
 				var loc = "<? echo $loc; ?>";
 				 $.post("aggregate_search.php",
 					{
+
 					  location: loc,
 					  keyword: un
 					},
@@ -63,7 +64,11 @@
   </head>
 
   <body background="logo1.png" style="background-repeat: no-repeat">
+<<<<<<< HEAD
+  <form id="srch" method="post">
+=======
   <form id="srch" method="post" action="results.php">
+>>>>>>> 51b69542989c0d5e525c51abc25284a26384a156
   <input type="hidden" id="json" name="json"/>
   </form>
   

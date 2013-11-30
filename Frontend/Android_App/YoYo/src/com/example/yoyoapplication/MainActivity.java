@@ -1,13 +1,10 @@
 package com.example.yoyoapplication;
 
-import org.json.JSONObject;
-
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
-import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
@@ -25,7 +22,8 @@ public class MainActivity extends Activity {
 	}
 	
 	public void discoverClick(View view) {
-		startActivity(new Intent("com.example.RESULTS"));
+		//startActivity(new Intent("com.example.RESULTS"));
+		startActivity(new Intent("com.example.JOBS"));
 	}
 	
 	public void registerClick(View view) {
@@ -34,16 +32,6 @@ public class MainActivity extends Activity {
 	
 	public void loginClick(View view) {
 		startActivity(new Intent("com.example.LOGIN"));
-	}
-	
-	public void test(View view) {
-		String JSON = QueryDatabase.getJSON(QueryDatabase.JSON_TEST);
-		//((TextView)findViewById(R.id.test)).setText(JSON);
-		if (JSON.equals("")) {
-			((TextView)findViewById(R.id.test)).setText("Nothing");
-		} else {
-			((TextView)findViewById(R.id.test)).setText("Something");
-		}
 	}
 	
 }
