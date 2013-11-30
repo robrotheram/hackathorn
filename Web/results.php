@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -22,11 +23,7 @@
   	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
 	</script>
 
-	<?php
-		//get json from index.php to use throughout
-		$data = $_POST["json"];
-	?>
-
+	
   </head>
 
   <body>
@@ -45,7 +42,6 @@
         			<li><a href="login.html">Login</a></li>
         			<li><a href="signup.html">Sign-Up</a></li>
         			<li><a href="contact.php">Contact</a></li>
-              
         		</ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -57,17 +53,33 @@
    			<div class="sortable">
    				<div id="jobsBox" class="span4">
    					<h3><a class="resultTitle" href="extendedresults.html">Jobs</a></h3>
-   					<ul>
-
-   					<!-- LIVE DATA HERE---------------------------- -->
-   						<?php
+   					<?php $jdata = json_decode($_POST['json']);?>
+   					<table class="table" style="width:100%">
+   					<tr>
+   						<td>Job Name</td>
+   						<td>Location</td>
+   					</tr>
+   					<tr>
+   						<td><?echo $jdata->jobs->jobs->jobs[0]->title;?></td>
+   						<td><?echo $jdata->jobs->jobs->jobs[0]->locations;?></td>
    						
-   							echo <li class="jobResult">$data["jobs"][0]</li>;
-							echo <li class="jobResult">$data["jobs"][1]</li>;
-							echo <li class="jobResult">$data["jobs"][2]</li>;  				
-						?>	
-           
-   					</ul>
+   					</tr>
+   					<tr>
+   						<td><?echo $jdata->jobs->jobs->jobs[1]->title;?></td>
+   						<td><?echo $jdata->jobs->jobs->jobs[1]->locations;?></td>
+   						
+   					</tr>
+   					<tr>
+   						<td><?echo $jdata->jobs->jobs->jobs[2]->title;?></td>
+   						<td><?echo $jdata->jobs->jobs->jobs[2]->locations;?></td>
+   						
+   					</tr>
+   					<tr>
+   						<td><?echo $jdata->jobs->jobs->jobs[3]->title;?></td>
+   						<td><?echo $jdata->jobs->jobs->jobs[3]->locations;?></td>
+   						
+   					</tr>
+					</table>
    				</div>
    				<div id="coursesBox" class="span4">
    					<h3><a class="resultTitle" href="extendedresults.html">Courses</a></h3>
@@ -113,25 +125,7 @@
    					<h3><a class="resultTitle" href="extendedresults.html">Alumni</a></h3>
    					<!-- These should link to the alumi's user profile. -->
 						<ul>
-							<?php
-   								$temp = $data["mentors"];
-   								
-   								if(count($temp) < 3){
-   									$size = count($temp);
-   								}
-   								
-   								if($size > 0){
-   								 echo <li class="mentorResult">$temp[0]</li>;
-   								}	
-   								
-   								if($size > 1){
-   								 echo <li class="mentorResult">$temp[1]</li>;
-   								}	
-   								
-   								if($size > 2){
-   								 echo <li class="mentorResult">$temp[3]</li>;
-   								}				
-							?>	  					
+										
    					</ul>   				
    				</div>
    				<div id="otherBox" class="span4">
