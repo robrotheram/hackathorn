@@ -47,6 +47,7 @@
    				<div id="jobsBox" class="span4">
    					<h3><a class="resultTitle" href="extendedresults.html">Jobs</a></h3>
    					<ul>
+   					<!-- LIVE DATA HERE---------------------------- -->
 							<li class="jobResult"></li>
 							<li class="jobResult"></li>
 							<li class="jobResult"></li>   					
@@ -55,17 +56,19 @@
    				<div id="coursesBox" class="span4">
    					<h3><a class="resultTitle" href="extendedresults.html">Courses</a></h3>
 						<ul>
-							<li class="courseResult"></li>
-							<li class="courseResult"></li>
-							<li class="courseResult"></li>   					
+						<!-- hard coded for demo -->
+							<li class="courseResult">Course 1</li>
+							<li class="courseResult">Course 2</li>
+							<li class="courseResult">Course 3</li>   					
    					</ul>   				
    				</div>
    				<div id="volunteerBox" class="span4">
    					<h3><a class="resultTitle" href="extendedresults.html">Volunteering</a></h3>
    					<ul>
-							<li class="volResult"></li>
-							<li class="volResult"></li>
-							<li class="volResult"></li>   					
+   					<!-- hard coded for demo -->
+							<li class="volResult">Volunteer Position 1</li>
+							<li class="volResult">Volunteer Position 2</li>
+							<li class="volResult">Volunteer Position 3</li>   					
    					</ul>
    				</div>
    			</div>
@@ -75,17 +78,19 @@
    				<div id="internshipBox" class="span4">
    					<h3><a class="resultTitle" href="extendedresults.html">Internships</a></h3>
    					<ul>
-							<li class="internResult"></li>
-							<li class="internResult"></li>
-							<li class="internResult"></li>   					
+   					<!-- hard coded for demo -->
+							<li class="internResult">Internship 1</li>
+							<li class="internResult">Internship 2</li>
+							<li class="internResult">Internship 3</li>   					
    					</ul>
    				</div>
    				<div id="extraCurrBox" class="span4">
    					<h3><a class="resultTitle" href="extendedresults.html">Groups</a></h3>
 						<ul>
-							<li class="extraCurrResult"></li>
-							<li class="extraCurrResult"></li>
-							<li class="extraCurrResult"></li>   					
+						<!-- hard coded for demo -->
+							<li class="extraCurrResult">ExtraCurricular 1</li>
+							<li class="extraCurrResult">ExtraCurricular 2</li>
+							<li class="extraCurrResult">ExtraCurricular 3</li>   					
    					</ul>   				
    				</div>
    				<div id="mentorBox" class="span4">
@@ -96,6 +101,13 @@
 							<li class="mentorResult"></li>
 							<li class="mentorResult"></li>   					
    					</ul>   				
+   				</div>
+   				<div id="otherBox" class="span4">
+   					<ul>
+   						<li class="otherResult">Other Activity 1</li>
+   						<li class="otherResult">Other Activity 2</li>
+   						<li class="otherResult">Other Activity 3</li>
+   					</ul>
    				</div>
    			</div>
    		</div>
