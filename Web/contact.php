@@ -1,3 +1,12 @@
+<?php
+	if(isset($_POST['email'])){	
+		$email = $_POST['email'];
+  			$message = $_POST['message'] ;
+		mail("robrotheram@gmail.com", "contact form",
+  		$message, "From:" . $_POST['name']);
+  		echo "Thank you for using our mail form";
+	}
+	?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -45,7 +54,7 @@
                     <h2>Send us a message</h2>
             </div>
             <p>Let us know what you think! Just give us a few details about yourself first.</p>
-            <form method="post" action="">
+            <form method="post" action="contact.php">
                     <fieldset>
                         <div class="clearfix">
                             <label for="name"><span>Name:</span></label>
@@ -71,35 +80,7 @@
                     </fieldset>
             </form>
 
-            <?php
-				if ($_POST['submit'])
-				{
-				  if(empty($_POST['name']) || empty($_POST['email']) || empty($_POST['comments']))
-				    { 
-				      $error = true;
-				    
-				    } else{
-
-				      $to = "leysh01@gmail.com";
-
-				      $name = trim($_POST['name']);
-				      $number = trim($_POST['number']);
-				      $email = trim($_POST['email']);
-				      $comments = trim($_POST['comments']);
-
-				      $subject = "Contact Form";
-
-				      $messages = "Name: $name \r\n Email: $email \r\n Comments: $comments";
-				      $headers = "From:" . $name;
-				      $mailsent = mail($to, $subject, $messages, $headers);
-
-				      if($mailsent){
-				        $sent = true;
-				        }
-				  }
-
-				}
-			?>
+            
     </div>
 </div>
     <!-- Le javascript
