@@ -16,7 +16,7 @@
       	padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
       }
    </style>
-   <link href="../INC/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+   <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
    <link href="yoyoambition.css" rel="stylesheet">
    <link href="login.css" rel="stylesheet">
    
@@ -92,13 +92,14 @@ $(document).ready(function(){
                     <h2>Login</h2>
             </div>
    		<div id="loginFormCont" class="span12">
-				<div id="usernameCont" class="span4">  
-          <input type="text" class="form-control" name="uname" placeholder="Username" required autofocus>
-          <input type="password" class="form-control" name="pass" placeholder="Password" required>
-          <label class="checkbox">
-            <input type="checkbox" value="remember-me"> Remember me
-          </label>
-        <button class="btn btn-lg btn-primary btn-block" id="loginButtonCont" type="submit">Sign in</button> 				
+				<div id="usernameCont" class="span6">   				
+   				<input id="usernameField" placeholder="Username" name="uname" type="text"></input>
+   			</div>
+   			<div id="passwordCont" class="span6">
+   				<input id="passwordField" placeholder="Password" name="pass" type="text"></input>
+   			</div>
+   			<div id="loginButtonCont" class="span12">
+   				<button class="btn btn-primary">Sign In</button>
    			</div>
    		</div>	
    	</div>
