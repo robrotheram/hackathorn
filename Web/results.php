@@ -18,68 +18,10 @@
       }
     </style>
 	
-	<?php
-		function countryCityFromIP($ipAddr)
-		{
-			$url = "http://api.ipinfodb.com/v3/ip-city/?key=5cfaab6c5af420b7b0f88d289571b990763e37b66761b2f053246f9db07ca913&ip=$ipAddr&format=json";
-			$d = file_get_contents($url);
-			return json_decode($d , true);
-		}
-
-		if(isset($_REQUEST['submit'])){
-		   $ip=countryCityFromIP($_REQUEST['ip']);
-
-		   //print_r($ip);
-		   
-		}
-		
-		$search_term = 
-	?>
-
-	
 	<!-- Database Connect javascripts -->
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
 </script>
 
-<script>
-
-<!--Use PHP get to retrieve JSON, then use this data below-->
-
-<?php
-	$search = request.getParameter("search");
-?>
-
-$(document).ready(function(){
-  $("button").click(function(){
-  
-	var loc = <?php
-		echo $ip['cityName'];
-	?>;
-
-  	var key = <?php 
-		echo request.getParameter("search"); 
-	?>;
-  	
-	//need to get search result JSON database and pass it onto results view
-    $.post("aggregate_search.php",
-    {
-      keyword:key,
-      location:loc
-    },
-    function(data,status){
-    	//alert(data);
-      var obj = jQuery.parseJSON(data);
-	  
-      if(obj.success == "1"){
-      	alert("Data Retrieved");
-      	window.location = "index1.html";
-      }else{
-		alert("No data has been retrieved!");
-      }
-    });
-  });
-});
-</script>
 
   </head>
 
@@ -111,15 +53,13 @@ $(document).ready(function(){
    				<div id="jobsBox" class="span4">
    					<h3><a class="resultTitle" href="extendedresults.html">Jobs</a></h3>
    					<ul>
-							<li id="jobResult1" class="JobResult"></li>
+							<li id="jobResult1" class="JobResult">
+								<?php
+									echo $result;
+								?>
+							</li>
 							<li id="jobResult2" class="JobResult"></li>
-							<li id="jobResult3" class="JobResult"></li> 
-							
-							<script>
-								document.getElementById("jobResult1").innerHTML = obj.jobs[0].title
-								document.getElementById("jobResult1").innerHTML = obj.jobs[0].title
-								document.getElementById("jobResult1").innerHTML = obj.jobs[0].title
-							</script>							
+							<li id="jobResult3" class="JobResult"></li> 					
    					</ul>
    				</div>
    				<div id="coursesBox" class="span4">
