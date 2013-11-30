@@ -8,9 +8,11 @@ import android.content.res.Configuration;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.view.Display;
+import android.view.Gravity;
 import android.view.Menu;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class ResultsActivity extends Activity{
@@ -19,14 +21,13 @@ public class ResultsActivity extends Activity{
 	
 	int screenWidth;
 	int screenHeight;
-	int numLinesOfResults;
-	int numResultsInLines;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.results);
 		//initVariables();
+		//testUI();
+		setContentView(R.layout.results);
 		//initUI();
 	}
 
@@ -44,49 +45,36 @@ public class ResultsActivity extends Activity{
 		screenHeight = display.getHeight();
 	}
 	
+	private void testUI() {
+		RelativeLayout topBar = (RelativeLayout)findViewById(R.id.bottomBar);
+		RelativeLayout.LayoutParams topBarParams = new RelativeLayout.LayoutParams(screenWidth/3 - RESULT_PADDING, screenHeight/3 - RESULT_PADDING);
+		topBar.setLayoutParams(topBarParams);
+	}
+	
 	private void initUI() {
 		// Create the topmost container and parameters
-		LinearLayout containerLayout = new LinearLayout(this);
-		LayoutParams containerParams = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
-		containerLayout.setOrientation(LinearLayout.VERTICAL);
+		RelativeLayout containerLayout = new RelativeLayout(this);
+		RelativeLayout.LayoutParams containerParams = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT);
 		containerLayout.setLayoutParams(containerParams);
 		
-		// Create number of results
-		// (six for now)
-		Display display = getWindowManager().getDefaultDisplay();
-		// List for the horizontal lists
-		List<LinearLayout> resultLayoutList = new ArrayList<LinearLayout>();
-		LayoutParams resultLayoutListParams = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
-		LayoutParams resultLayoutParams;
-		if (display.getOrientation() == Configuration.ORIENTATION_LANDSCAPE) {
-			resultLayoutParams = new LinearLayout.LayoutParams(screenWidth/3 + RESULT_PADDING, screenWidth/3 + RESULT_PADDING);
-			numLinesOfResults = 2;
-			numResultsInLines = 3;
-		} else {
-			resultLayoutParams = new LinearLayout.LayoutParams(screenWidth/2 + RESULT_PADDING, screenWidth/2 + RESULT_PADDING);
-			numLinesOfResults = 3;
-		}
-		for (int i = 0; i < numLinesOfResults; i++) {
-			resultLayoutList.add(new LinearLayout(this));
-		}
-		List<LinearLayout> layoutList = new ArrayList<LinearLayout>();
-		for (int i = 0; i < 6; i++) {
-			layoutList.add(new LinearLayout(this));
-		}
-		for (int i = 0; i < resultLayoutList.size(); i++) {
-			for (int j = 0; j < numResultsInLines; j++) {
-				TextView tv = new TextView(this);
-				tv.setText("Hello World!");
-				LinearLayout tempL = layoutList.get(i + (i + j));
-				tempL.addView(tv);
-				tempL.setLayoutParams(resultLayoutParams);
-				resultLayoutList.get(i).addView(tempL);
-			}
-		}
-		for (LinearLayout layout : resultLayoutList) {
-			layout.setLayoutParams(resultLayoutListParams);
-			containerLayout.addView(layout);
-		}
+		// Create top bar
+		RelativeLayout topBar = new RelativeLayout(this);
+		RelativeLayout.LayoutParams topBarParams = new RelativeLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
+		topBarParams.addRule(RelativeLayout.ALIGN_PARENT_TOP);
+		topBar.setLayoutParams(topBarParams);
+		
+		// First results layout
+		LinearLayout firstResultLayout = new LinearLayout(this);
+		RelativeLayout.LayoutParams firstResultParams = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+		firstResultParams.addRule(RelativeLayout.CENTER_HORIZONTAL);
+		firstResultLayout.setGravity(Gravity.CENTER);
+		//firstResultParams.setLayoutParams(firstResultParams);
+		
+		// Create bottom bar
+		RelativeLayout bottomBar = new RelativeLayout(this);
+		RelativeLayout.LayoutParams bottomBarParams = new RelativeLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
+		bottomBarParams.addRule(RelativeLayout.ALIGN_PARENT_TOP);
+		bottomBar.setLayoutParams(topBarParams);
 		
 		// Testing shit
 

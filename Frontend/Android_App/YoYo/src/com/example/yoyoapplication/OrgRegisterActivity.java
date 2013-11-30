@@ -1,17 +1,16 @@
 package com.example.yoyoapplication;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 
-public class RegisterActivity extends Activity{
+public class OrgRegisterActivity extends Activity{
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.register);
+		setContentView(R.layout.org_register);
 	}
 
 	@Override
@@ -21,12 +20,8 @@ public class RegisterActivity extends Activity{
 		return true;
 	}
 	
-	public void registerClick(View view) {
-		
-	}
-	
 	public void orgRegisterClick(View view) {
-		startActivity(new Intent("com.example.ORGREGISTER"));
+		
 	}
 	
 }

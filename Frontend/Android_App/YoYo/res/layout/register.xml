@@ -19,6 +19,24 @@
 	        android:text="Register"
 	        android:gravity="center"
 	        android:textSize="25sp" />
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal">
+	        
+		    <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="Represent an organisation?  Create an organisation account."
+		        android:gravity="center" />
+		    
+		    <Button
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="Register org."
+		        android:onClick="orgRegisterClick" />
+	    
+	    </LinearLayout>
 	    
 	    <TextView
 	        android:id="@+id/tv_first_name"
