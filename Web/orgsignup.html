@@ -31,6 +31,75 @@
    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
    <link rel="shortcut icon" href="../assets/ico/favicon.png">
+   
+   
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+  	var email = document.getElementById("emailField").value;
+	var passField = document.getElementById("passField").value;
+	var passFieldCon = document.getElementById("passConfField").value;
+	var orgname = document.getElementById("orgNameField").value;
+	var orgreg = document.getElementById("orgNumField").value;
+	var feild = document.getElementById("tagsField").value;
+	var pc = document.getElementById("postcodeField").value;
+	var phonenumber = document.getElementById("telField").value;
+
+	var bsize ="infi";
+	if(document.getElementById("smallRadio").checked) {
+		bsize ="small";
+		
+	}else{
+		bsize = "medium";	
+	}
+	
+	if(document.getElementById("largeRadio").checked) {
+		bsize ="lage";
+		
+	}else{
+		bsize = "medium";
+	}
+	
+	if(passField == passFieldCon){
+	
+   		$.post("organisation_signup.php",{
+    	username:email,
+      	pass:passField,
+      	orgname:orgname,
+		field:orgreg,
+		subfield:feild,
+		size:bsize,
+		loc:pc,
+		conPhone:phonenumber
+    },
+    function(data,status){
+    	//alert(data);
+    	var obj = jQuery.parseJSON(data);
+      if(obj.success == "1"){
+      	alert("You are now Signed up well done");
+      	window.location = "index1.html";
+      }else{
+      	alert("Incorrect username and/or password\n please try again");
+      }
+      
+    });	
+    }else{
+    	alert("passwords do not match");
+    }
+  });
+});
+</script>
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
 </head>
 <body>
 	<div class="navbar navbar-inverse navbar-fixed-top">
@@ -56,7 +125,7 @@
 		<div class="page-header">
                     <h2>Organisation Sign Up</h2>
             </div>
-		<form>
+		
 			<div id="credInputs">
 				<div id="emailInput" class="span12">
 					<label for="emailField">Email Address:</label>
@@ -78,7 +147,7 @@
 				</div>
 				<div id="regNumInput" class="span5">
 					<label for="orgNumField">Organisation/Charity Reg Number:</label>
-					<input id="orgNumField" name="orgnum" type="number"></input>				
+					<input id="orgNumField" name="orgnum" type="text"></input>				
 				</div>
 				<div id="tagInput" class="span12">
 					<label for="tagsField">Search Tags:</label>
@@ -110,9 +179,9 @@
 				<input id="telField" name="tel" type="tel"></input><br />
 			</div>
 			<div id="submitInput" class="span12">
-				<input id="submitButton" name="submit" value="Submit" type="submit"></input>			
+				<button>Submit</button>		
 			</div>
-		</form>	
+		
 	</div>
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
