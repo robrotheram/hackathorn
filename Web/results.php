@@ -19,9 +19,13 @@
     </style>
 	
 	<!-- Database Connect javascripts -->
-   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
-</script>
+  	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+	</script>
 
+	<?php
+		//get json from index.php to use throughout
+		$data = $_POST["json"];
+	?>
 
   </head>
 
@@ -41,6 +45,7 @@
         			<li><a href="login.html">Login</a></li>
         			<li><a href="signup.html">Sign-Up</a></li>
         			<li><a href="contact.php">Contact</a></li>
+              
         		</ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -55,9 +60,12 @@
    					<ul>
 
    					<!-- LIVE DATA HERE---------------------------- -->
-							<li class="jobResult"></li>
-							<li class="jobResult"></li>
-							<li class="jobResult"></li>   					
+   						<?php
+   						
+   							echo <li class="jobResult">$data["jobs"][0]</li>;
+							echo <li class="jobResult">$data["jobs"][1]</li>;
+							echo <li class="jobResult">$data["jobs"][2]</li>;  				
+						?>	
            
    					</ul>
    				</div>
@@ -105,9 +113,25 @@
    					<h3><a class="resultTitle" href="extendedresults.html">Alumni</a></h3>
    					<!-- These should link to the alumi's user profile. -->
 						<ul>
-							<li class="mentorResult"></li>
-							<li class="mentorResult"></li>
-							<li class="mentorResult"></li>   					
+							<?php
+   								$temp = $data["mentors"];
+   								
+   								if(count($temp) < 3){
+   									$size = count($temp);
+   								}
+   								
+   								if($size > 0){
+   								 echo <li class="mentorResult">$temp[0]</li>;
+   								}	
+   								
+   								if($size > 1){
+   								 echo <li class="mentorResult">$temp[1]</li>;
+   								}	
+   								
+   								if($size > 2){
+   								 echo <li class="mentorResult">$temp[3]</li>;
+   								}				
+							?>	  					
    					</ul>   				
    				</div>
    				<div id="otherBox" class="span4">
