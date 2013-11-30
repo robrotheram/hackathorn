@@ -5,7 +5,7 @@
     <title>YoYo | Ambition</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Matt" >
 
     <!-- Le styles -->
     <link href="./INC/bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -18,7 +18,6 @@
   </head>
 
   <body>
-
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -29,10 +28,12 @@
           </button>
           <a class="brand" href="index.html">YoYo</a>
           <div class="nav-collapse collapse pull-right">
-            <ul class="nav" id="titlemenu">
-              <li><a href="#about">Login</a></li>
-              <li class="active"><a href="contact.php">Contact</a></li>
-            </ul>
+            <ul class="nav">
+        			<li><a href="index.html">Home</a></li>
+        			<li><a href="login.html">Login</a></li>
+        			<li><a href="signup.html">Sign-Up</a></li>
+        			<li class="active"><a href="contact.php">Contact</a></li>
+        		</ul>
           </div><!--/.nav-collapse -->
         </div>
       </div>
