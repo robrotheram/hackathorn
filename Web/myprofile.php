@@ -1,3 +1,8 @@
+<?php
+	session_start();	
+	$user = $_SESSION['userid'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -80,7 +85,11 @@ $(document).ready(function(){
             <a class="brand" href="index.html">YoYo</a>
           <div class="nav-collapse collapse pull-right">
               <ul class="nav">
-                <li><a href="login.html">Login</a></li>
+                <?php if($user ==null){?>
+                	<li><a href="login.html">Login</a></li>
+                <? }else{ ?> 
+                	<li><a href="myprofile.html">Profile</a></li>
+                <? } ?>	
                 <li class="active"><a href="signup.html">Sign-Up</a></li>
                 <li><a href="contact.php">Contact</a></li>
               </ul>
