@@ -58,7 +58,7 @@
                 <? }else{ ?> 
                 	<li><a href="myprofile.php">Profile</a></li>
                 <? } ?>	
-                <li class="active"><a href="signup.html">Sign-Up</a></li>
+                <li><a href="signup.html">Sign-Up</a></li>
                 <li><a href="contact.php">Contact</a></li>
               </ul>
           </div><!--/.nav-collapse -->
