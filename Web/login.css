@@ -1,0 +1,9 @@
+input.radioInput
+{
+	margin: 20px 10px;	
+}
+label.radioLabel
+{
+	margin: 20px 10px;
+	display:inline;
+}
