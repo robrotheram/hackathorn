@@ -35,6 +35,7 @@
         			<li><a href="login.html">Login</a></li>
         			<li><a href="signup.html">Sign-Up</a></li>
         			<li><a href="contact.php">Contact</a></li>
+              
         		</ul>
           </div><!--/.nav-collapse -->
         </div>

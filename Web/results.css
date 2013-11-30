@@ -10,7 +10,11 @@ div.sortable h3
 	margin:0;
 	padding:0px 10px;
 	font-size:14pt;
-	color:#fff;	
+	color:white;	
+}
+a 
+{ 
+	color: white; 
 }
 #jobsBox h3
 {
