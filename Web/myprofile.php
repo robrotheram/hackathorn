@@ -86,7 +86,17 @@ $(document).ready(function(){
           <div class="nav-collapse collapse pull-right">
               <ul class="nav">
                 <li><a href="login.html">Home</a></li>
-                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Notifications <b class="caret"></b></a><ul class="dropdown-menu"><li> Messages </li><li class="divider"></li><li class="nav-header"> Oppertunitites </li><li> Shares </li></ul></li>
+                <li class="dropdown">
+                	<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                		Notifications 
+                		<b class="caret"></b>
+                	</a>
+                	<ul class="dropdown-menu">
+                		<li class="nav-header"> Messages </li>
+                		<li class="nav-header"> Opportunities </li>
+                		<li class="nav-header"> Shares </li>
+                	</ul>
+                </li>
                 <?php if($user ==null){?>
                 	<li><a href="login.html">Login</a></li>
                 <? }else{ ?> 
@@ -164,5 +174,46 @@ $(document).ready(function(){
     
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script>
+(function ($, window, delay) {
+  // http://jsfiddle.net/AndreasPizsa/NzvKC/
+  var theTimer = 0;
+  var theElement = null;
+    var theLastPosition = {x:0,y:0};
+  $('[data-toggle]')
+    .closest('li')
+    .on('mouseenter', function (inEvent) {
+    if (theElement) theElement.removeClass('open');
+    window.clearTimeout(theTimer);
+    theElement = $(this);
+
+    theTimer = window.setTimeout(function () {
+      theElement.addClass('open');
+    }, delay);
+  })
+    .on('mousemove', function (inEvent) {
+        if(Math.abs(theLastPosition.x - inEvent.ScreenX) > 4 || 
+           Math.abs(theLastPosition.y - inEvent.ScreenY) > 4)
+        {
+            theLastPosition.x = inEvent.ScreenX;
+            theLastPosition.y = inEvent.ScreenY;
+            return;
+        }
+        
+    if (theElement.hasClass('open')) return;
+    window.clearTimeout(theTimer);
+    theTimer = window.setTimeout(function () {
+      theElement.addClass('open');
+    }, delay);
+  })
+    .on('mouseleave', function (inEvent) {
+    window.clearTimeout(theTimer);
+    theElement = $(this);
+    theTimer = window.setTimeout(function () {
+      theElement.removeClass('open');
+    }, delay);
+  });
+})(jQuery, window, 200); // 200 is the delay in milliseconds
+</script>
 </body>
 </html>
