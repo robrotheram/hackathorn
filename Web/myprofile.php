@@ -85,8 +85,6 @@ $(document).ready(function(){
             <a class="brand" href="index.html">YoYo</a>
           <div class="nav-collapse collapse pull-right">
               <ul class="nav">
-                <li><a href="login.html">Home</a></li>
-                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Notifications <b class="caret"></b></a><ul class="dropdown-menu"><li> Messages </li><li class="divider"></li><li class="nav-header"> Oppertunitites </li><li> Shares </li></ul></li>
                 <?php if($user ==null){?>
                 	<li><a href="login.html">Login</a></li>
                 <? }else{ ?> 
@@ -105,7 +103,7 @@ $(document).ready(function(){
             </div>
    	
       <div id="profilepic">     
-        <img src="images/qmark.jpg" alt="profile pic" width="200" height="120" /> 
+        <img src="images/av3.jpg" alt="profile pic" width="200" height="120" /> 
         <p><a href="#" class="btn btn-default" role="button" style="margin-left:16px">Change profile picture.</a></p> 
       </div>
 
@@ -139,10 +137,43 @@ $(document).ready(function(){
             <label class="radioLabel" for="femaleRadio">Female</label>          
           </input>
         </div>
+        
+        <!--
+        <div id="disiInput" class="span5">  
+        <label for="disabilityInput">Do you have a disability?</label>         
+          <input id="disableYes" class="disableRadio" type="radio" data-toggle="collapse" name="disability" value="yes">
+            <label class="radioLabel" for="disableYes">Yes</label>          
+          </input>
+         
+          <input id="disableNo" class="disableRadio" type="radio" name="disability" value="no">
+            <label class="radioLabel" for="disableNo">No</label>          
+          </input>
+        </div>
+      -->
+        <div class="clear"></div> 
+        <div id="supportWorkerInput" class="span12">  
+        <label for="supportInput">Do you need a Support Worker?</label>         
+          <input id="supportYes" class="supportRadio" type="radio" name="supportWorker" value="yes">
+            <label class="radioLabel" for="supportYes">Yes</label>          
+          </input>
+          <input id="supportNo" class="supportRadio" type="radio" name="supportWorker" value="no">
+            <label class="radioLabel" for="supportNo">No</label>          
+          </input>
+        </div>
+       <div class="clear"></div> 
+        <div id="disableInput" class="span12">
+          <label for="disableInput">If you have a disability, please state what it is:</label>        
+          <input style="width:70%;height:100px;"id="disableInput" name="disable" type="text"></input>
+        </div>
 
         <div id="qualificationInput" class="span12">
           <label for="qualificationInput">Qualifications:</label>        
           <input style="width:70%;height:100px;"id="qualificationInput" name="qualifications" type="text"></input>
+        </div>
+
+         <div id="workexInput" class="span12">
+          <label for="workexInput">Work Experience:</label>        
+          <input style="width:70%;height:100px;"id="workexInput" name="workex" type="text"></input>
         </div>
 
         <div id="hobbiesInput" class="span12">
