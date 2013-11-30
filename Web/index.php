@@ -84,7 +84,7 @@
           <div class="nav-collapse collapse pull-right">
               <ul class="nav">
 
-                <li class="active"><a href="index.php">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li class="dropdown">
                 	<a class="dropdown-toggle" data-toggle="dropdown" href="#">
                 		Notifications 
@@ -102,7 +102,7 @@
                 <? }else{ ?> 
                 	<li><a href="myprofile.php">Profile</a></li>
                 <? } ?>	
-                <li><a href="signup.html">Sign-Up</a></li>
+                <li class="active"><a href="signup.html">Sign-Up</a></li>
                 <li><a href="contact.php">Contact</a></li>
               </ul>
           </div><!--/.nav-collapse -->
@@ -113,12 +113,13 @@
     	
 	
 		    <div style="margin-top:10%; margin-left:12%" class="input-append">
-		        <input id="search" name="search" type="text" placeholder="What do you want to be?" class="span8"/>
+		        <input id="search" name="search" type="text" placeholder="What's your passion?" class="span8"/>
 		        <button class="btn btn-primary">Discover</button>	
 		    </div>
 		
     	<div class="bannerbottom">
     		<center>
+    		<p><a href="tandc.html">Terms and Conditions</a></p>
 			<script type="text/javascript" src="http://www.reddit.com/static/button/button1.js"></script>
 			<script src="https://platform.linkedin.com/in.js" type="text/javascript"></script>
 			<script type="IN/Share" data-counter="right"></script>
