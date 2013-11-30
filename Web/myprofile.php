@@ -82,11 +82,11 @@ $(document).ready(function(){
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="brand" href="index.html">YoYo</a>
+            <a class="brand" href="index.php">YoYo</a>
           <div class="nav-collapse collapse pull-right">
               <ul class="nav">
 
-                <li><a href="login.html">Home</a></li>
+                <li><a href="login.php">Home</a></li>
                 <li class="dropdown">
                 	<a class="dropdown-toggle" data-toggle="dropdown" href="#">
                 		Notifications 

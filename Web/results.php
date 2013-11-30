@@ -28,25 +28,43 @@
 
   <body>
 
-    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="index.html">YoYo</a>
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="index.php">YoYo</a>
           <div class="nav-collapse collapse pull-right">
-            <ul class="nav">
-        			<li><a href="login.html">Login</a></li>
-        			<li><a href="signup.html">Sign-Up</a></li>
-        			<li><a href="contact.php">Contact</a></li>
-        		</ul>
+              <ul class="nav">
+
+                <li><a href="login.php">Home</a></li>
+                <li class="dropdown">
+                	<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                		Notifications 
+                		<b class="caret"></b>
+                	</a>
+                	<ul class="dropdown-menu">
+                		<li class="nav-header"> Messages </li>
+                		<li class="nav-header"> Opportunities </li>
+                		<li class="nav-header"> Shares </li>
+                	</ul>
+                </li>
+
+                <?php if($user ==null){?>
+                	<li><a href="login.html">Login</a></li>
+                <? }else{ ?> 
+                	<li><a href="myprofile.php">Profile</a></li>
+                <? } ?>	
+                <li class="active"><a href="signup.html">Sign-Up</a></li>
+                <li><a href="contact.php">Contact</a></li>
+              </ul>
           </div><!--/.nav-collapse -->
         </div>
       </div>
-    </div>
+  </div>
    <div class="container">
    	<div class="container-fluid">
    		<div class="row-fluid">

@@ -64,36 +64,52 @@
   </head>
 
   <body background="logo1.png" style="background-repeat: no-repeat">
-<<<<<<< HEAD
+
   <form id="srch" method="post">
-=======
+
   <form id="srch" method="post" action="results.php">
->>>>>>> 51b69542989c0d5e525c51abc25284a26384a156
   <input type="hidden" id="json" name="json"/>
   </form>
   
 	
 
-    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="index.html">YoYo</a>
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="index.php">YoYo</a>
           <div class="nav-collapse collapse pull-right">
-            <ul class="nav">
-        			<li><a href="login.html">Login</a></li>
-        			<li><a href="signup.html">Sign-Up</a></li>
-        			<li><a href="contact.php">Contact</a></li>
-        		</ul>
+              <ul class="nav">
+
+                <li class="active"><a href="index.php">Home</a></li>
+                <li class="dropdown">
+                	<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                		Notifications 
+                		<b class="caret"></b>
+                	</a>
+                	<ul class="dropdown-menu">
+                		<li class="nav-header"> Messages </li>
+                		<li class="nav-header"> Opportunities </li>
+                		<li class="nav-header"> Shares </li>
+                	</ul>
+                </li>
+
+                <?php if($user ==null){?>
+                	<li><a href="login.html">Login</a></li>
+                <? }else{ ?> 
+                	<li><a href="myprofile.php">Profile</a></li>
+                <? } ?>	
+                <li><a href="signup.html">Sign-Up</a></li>
+                <li><a href="contact.php">Contact</a></li>
+              </ul>
           </div><!--/.nav-collapse -->
         </div>
       </div>
-    </div>
-
+  </div>
     <div class="container">
     	
 	
@@ -122,6 +138,48 @@
 
 
     </script>
+    
+    <script>
+(function ($, window, delay) {
+  // http://jsfiddle.net/AndreasPizsa/NzvKC/
+  var theTimer = 0;
+  var theElement = null;
+    var theLastPosition = {x:0,y:0};
+  $('[data-toggle]')
+    .closest('li')
+    .on('mouseenter', function (inEvent) {
+    if (theElement) theElement.removeClass('open');
+    window.clearTimeout(theTimer);
+    theElement = $(this);
+
+    theTimer = window.setTimeout(function () {
+      theElement.addClass('open');
+    }, delay);
+  })
+    .on('mousemove', function (inEvent) {
+        if(Math.abs(theLastPosition.x - inEvent.ScreenX) > 4 || 
+           Math.abs(theLastPosition.y - inEvent.ScreenY) > 4)
+        {
+            theLastPosition.x = inEvent.ScreenX;
+            theLastPosition.y = inEvent.ScreenY;
+            return;
+        }
+        
+    if (theElement.hasClass('open')) return;
+    window.clearTimeout(theTimer);
+    theTimer = window.setTimeout(function () {
+      theElement.addClass('open');
+    }, delay);
+  })
+    .on('mouseleave', function (inEvent) {
+    window.clearTimeout(theTimer);
+    theElement = $(this);
+    theTimer = window.setTimeout(function () {
+      theElement.removeClass('open');
+    }, delay);
+  });
+})(jQuery, window, 200); // 200 is the delay in milliseconds
+</script>
 
   </body>
 </html>
