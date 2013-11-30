@@ -13,6 +13,12 @@
     <style>
       body {
         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+        
+background-image:url('newbackground.jpg');
+background-repeat:no-repeat;
+background-attachment:fixed;
+background-position:center; 
+
       }
     </style>
 	
@@ -62,7 +68,7 @@
 	
   </head>
 
-  <body background="newbackground.jpg" style="background-repeat: no-repeat">
+  <body>
 
 
   <form id="srch" method="post" action="results.php">
