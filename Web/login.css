@@ -1,8 +1,9 @@
-input.genderRadio
+input.radioInput
 {
-	margin: 10px 10px;	
+	margin: 20px 10px;	
 }
 label.radioLabel
 {
+	margin: 20px 10px;
 	display:inline;
 }
