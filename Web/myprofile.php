@@ -69,16 +69,16 @@ $(document).ready(function(){
 	var email = document.getElementById("emailField").value;
 	var fn = document.getElementById("fNameField").value;
 	var sn = document.getElementById("sNameField").value;
-	var dob = document.getElementById("dobField").value;
+	var dobi = document.getElementById("dobField").value;
 	var pc = document.getElementById("postcodeField").value;
 	var wei = document.getElementById("workexInput").value;
 	var abi = document.getElementById("aboutmeInput").value;
-	var gender ="bi";
+	var genderi ="bi";
 	
 	if(document.getElementById('maleRadio').checked) {
-		gender = "male";
+		genderi = "male";
 	}else{
-		gender = "female";
+		genderi = "female";
 	}
 	
 	var spi = 'yes';
@@ -90,7 +90,10 @@ $(document).ready(function(){
 	
 	$.post("updateprofile.php",
     {
-		dob:dob
+    	username:email,
+      	forename:fn,
+      	surname:sn,
+      	dob:dobi
     },
     function(data,status){
     	alert(data);
