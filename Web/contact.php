@@ -65,9 +65,9 @@
                                 <textarea tabindex="3" class="xxlarge" style="width:70%" id="comments" name="body" label="Message" rows="7"></textarea>
                             </div>
                         </div>
-                        <div class="actions">
-                            <input tabindex="4" href="completedmail.html" type="submit" id="submit" class="btn primary large" value="Send message">
-                        </div>
+                        <div class="actions"><a href="completedemail.html">
+                            <input tabindex="4"  type="submit" id="submit" class="btn primary large" value="Send message">
+                        </a></div>
                     </fieldset>
             </form>
 
