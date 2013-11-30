@@ -116,9 +116,15 @@
 	        android:text="Password"
 	        android:inputType="textPassword" />
     
+	    	<Button
+	    		android:id="@+id/btn_register"
+	    		android:layout_width="match_parent"
+	    		android:layout_height="wrap_content"
+	    		android:text="Register"
+				android:onClick="registerClick" />
+	    
     </LinearLayout>
     
-    <!-- email password firstname lastname dob gender postcode -->
 
     
     

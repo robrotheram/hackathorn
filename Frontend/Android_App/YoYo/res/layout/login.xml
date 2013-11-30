@@ -43,6 +43,13 @@
 	        android:id="@+id/et_email"
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content" />
+	    
+	    <Button
+	    	android:id="@+id/btn_login"
+	    	android:layout_width="match_parent"
+	    	android:layout_height="wrap_content"
+	    	android:text="Log in"
+			android:onClick="loginClick" />
     
     </LinearLayout>
 
