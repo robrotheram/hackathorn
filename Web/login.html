@@ -31,6 +31,39 @@
    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
    <link rel="shortcut icon" href="../assets/ico/favicon.png">
+   
+   <!-- Database Connect javascripts ---!>
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+
+  	var un = document.getElementById("usernameField").value;
+  	var pass = document.getElementById("passwordField").value;
+  	
+    $.post("secure_login.php",
+    {
+      uname:un,
+      pass:pass
+    },
+    function(data,status){
+    	//alert(data);
+      var obj = jQuery.parseJSON(data);
+      if(obj.success == "1"){
+      	alert("You are now loged in");
+      	window.location = "index1.html";
+      }else{
+      alert("Incorrect username and/or password\n please try again");
+      }
+    });
+  });
+});
+</script>
+   
+   
+   
+   
 </head>
 <body>
 	<div class="navbar navbar-inverse navbar-fixed-top">
@@ -61,6 +94,24 @@
    			<label for="usernameField">Username:</label>
    			<input id="usernameField" name="username" type="text"></input>
    		</div>
+<<<<<<< HEAD
+   		
+   			<div id="loginFormCont" class="span12">
+					<div id="usernameCont" class="span6">   				
+   					<label for="usernameField">Username:</label>
+   					<input id="usernameField" name="uname" type="text"></input>
+   				</div>
+   				<div id="passwordCont" class="span6">
+   					<label for="passwordField">Password:</label>
+   					<input id="passwordField" name="pass" type="text"></input>
+   				</div>
+   				<div id="loginButtonCont" class="span12">
+   					<button>Submit</button>
+   				</div>
+   			</div>
+   		
+   	</div>
+=======
    		<div id="passwordCont" class="span5">
    			<label for="passwordField">Password:</label>
    			<input id="passwordField" name="password" type="text"></input>
@@ -69,6 +120,7 @@
    			<input id="loginButton" name="login" value="Login" type="submit"></input>
    		</div>
    	</form>
+>>>>>>> f84a383c0d76eae37a49e29b83ced6aac18a77ac
    </div>
    <script src="https://code.jquery.com/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
