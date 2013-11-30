@@ -64,9 +64,12 @@
   </head>
 
   <body background="logo1.png" style="background-repeat: no-repeat">
+<<<<<<< HEAD
 
   <form id="srch" method="post">
 
+=======
+>>>>>>> 1dd5bb8b890327ca208b7598324aa4bf31988a9e
   <form id="srch" method="post" action="results.php">
   <input type="hidden" id="json" name="json"/>
   </form>
@@ -76,12 +79,7 @@
       <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="brand" href="index.php">YoYo</a>
+
           <div class="nav-collapse collapse pull-right">
               <ul class="nav">
 
@@ -115,7 +113,7 @@
 	
 		    <div style="margin-top:10%; margin-left:12%" class="input-append">
 		        <input id="search" name="search" type="text" placeholder="What do you want to be?" class="span8"/>
-		        <button class="btn btn-primary">Sign In</button>	
+		        <button class="btn btn-primary">Discover</button>	
 		    </div>
 		
     	<div class="bannerbottom">
