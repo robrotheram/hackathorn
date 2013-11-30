@@ -65,6 +65,10 @@
 
   <body background="logo1.png" style="background-repeat: no-repeat">
 
+
+  <form id="srch" method="post">
+
+
   <form id="srch" method="post" action="results.php">
   <input type="hidden" id="json" name="json"/>
   </form>
