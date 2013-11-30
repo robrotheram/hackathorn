@@ -15,46 +15,73 @@
     	android:layout_alignParentTop="true">
         
         <LinearLayout
-            android:id="@+id/result1"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:id="@+id/job_container"
+            android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:gravity="center"
-            android:background="@color/red" >
-    	
+            android:orientation="vertical" >
+
             <TextView
                 android:layout_width="wrap_content"
     			android:layout_height="wrap_content"
-                android:text="Hello world1!" />
+                android:text="Jobs"
+                android:textSize="25sp" />
             
+            <LinearLayout
+                android:id="@+id/job_results"
+                android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			android:orientation="vertical" >
+                
+            </LinearLayout>
+                            
     	</LinearLayout>
     	
         <LinearLayout
-        	android:id="@+id/result2"
+        	android:id="@+id/internship_container"
         	android:layout_width="wrap_content"
     		android:layout_height="wrap_content"
+    		android:orientation="vertical"
     		android:layout_centerHorizontal="true"
     		android:gravity="center">
     	
             <TextView
                 android:layout_width="wrap_content"
     			android:layout_height="wrap_content"
-                android:text="Hello world2!" />
+                android:text="Internship/Apprenticeship"
+                android:textSize="25sp" />
             
+            <LinearLayout
+                android:id="@+id/internship_results"
+                android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			android:orientation="vertical" >
+                
+            </LinearLayout>
             
     	</LinearLayout>
     	
         <LinearLayout
-        android:id="@+id/result3"
+        android:id="@+id/volunteer_container"
         android:layout_width="wrap_content"
     	android:layout_height="wrap_content"
+    	android:orientation="vertical"
     	android:layout_alignParentRight="true"
     	android:gravity="center">
     	
             <TextView
                 android:layout_width="wrap_content"
     			android:layout_height="wrap_content"
-                android:text="Hello world3!" />
+                android:text="Volunteer"
+                android:textSize="25sp" />
+            
+            <LinearLayout
+                android:id="@+id/volunteer_results"
+                android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			android:orientation="vertical" >
+                
+            </LinearLayout>
             
     	</LinearLayout>
         
@@ -66,44 +93,13 @@
     	android:layout_height="wrap_content"
     	android:layout_alignLeft="@+id/topBar"
         android:layout_centerVertical="true"
-    	android:layout_centerHorizontal="true">
-    	
-        <LinearLayout
-        android:id="@+id/result5"
-        android:layout_width="wrap_content"
-    	android:layout_height="wrap_content"
-    	android:layout_centerHorizontal="true"
     	android:gravity="center">
     	
-            <TextView
-                android:layout_width="wrap_content"
-    			android:layout_height="wrap_content"
-                android:text="Hello world5!" />
-            
-            
-    	</LinearLayout>
-    	
         <LinearLayout
-        android:id="@+id/result6"
-        android:layout_width="wrap_content"
-    	android:layout_height="wrap_content"
-    	android:layout_alignParentRight="true"
-    	android:gravity="center">
-    	
-            <TextView
-                android:layout_width="wrap_content"
-    			android:layout_height="wrap_content"
-                android:text="Hello world6!" />
-            
-    	</LinearLayout>
-        
-    </RelativeLayout>
-
-    <LinearLayout
-        android:id="@+id/result4"
+        android:id="@+id/courses_container"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/topBar"
+        android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
         android:gravity="center"
         android:orientation="vertical" >
@@ -111,7 +107,67 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello world4!" />
+            android:text="Courses"
+            android:textSize="25sp" />
+        
+        	<LinearLayout
+                android:id="@+id/courses_results"
+                android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			android:orientation="vertical" >
+                
+            </LinearLayout>
+        
     </LinearLayout>
-    
+        
+        <LinearLayout
+        android:id="@+id/extra_curricular_container"
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:orientation="vertical"
+    	android:layout_centerHorizontal="true"
+    	android:gravity="center">
+    	
+            <TextView
+                android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+                android:text="Extra-curricular activities"
+                android:textSize="25sp" />
+            
+            <LinearLayout
+                android:id="@+id/extra_curricular_results"
+                android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			android:orientation="vertical" >
+                
+            </LinearLayout>
+            
+    	</LinearLayout>
+    	
+        <LinearLayout
+        android:id="@+id/mentoring_container"
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:orientation="vertical"
+    	android:layout_alignParentRight="true"
+    	android:gravity="center">
+    	
+            <TextView
+                android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+                android:text="Mentoring"
+                android:textSize="25sp" />
+            
+            <LinearLayout
+                android:id="@+id/mentoring_results"
+                android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			android:orientation="vertical" >
+                
+            </LinearLayout>
+            
+    	</LinearLayout>
+        
+    </RelativeLayout>
+
 </RelativeLayout>

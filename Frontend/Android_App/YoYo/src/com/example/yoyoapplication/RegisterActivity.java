@@ -5,6 +5,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
 
 public class RegisterActivity extends Activity{
 	
@@ -22,7 +26,14 @@ public class RegisterActivity extends Activity{
 	}
 	
 	public void registerClick(View view) {
-		
+		String firstName = ((EditText)findViewById(R.id.et_first_name)).getText().toString();
+		String lastName = ((EditText)findViewById(R.id.et_last_name)).getText().toString();
+		RadioGroup genderGroup = (RadioGroup)findViewById(R.id.rg_gender);
+		String gender = ((RadioButton)findViewById(genderGroup.getCheckedRadioButtonId())).getText().toString();
+		String dob = ((EditText)findViewById(R.id.et_dob)).getText().toString();
+		String postcode = ((EditText)findViewById(R.id.et_postcode)).getText().toString();
+		String email = ((EditText)findViewById(R.id.et_email)).getText().toString();
+		String password = ((EditText)findViewById(R.id.et_password)).getText().toString();
 	}
 	
 	public void orgRegisterClick(View view) {
