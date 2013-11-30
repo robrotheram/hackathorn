@@ -62,7 +62,7 @@
 	
   </head>
 
-  <body background="logo1.png" style="background-repeat: no-repeat">
+  <body background="newbackground.jpg" style="background-repeat: no-repeat">
 
 
   <form id="srch" method="post" action="results.php">
