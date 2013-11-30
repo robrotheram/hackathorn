@@ -88,7 +88,7 @@ $(document).ready(function(){
                 <?php if($user ==null){?>
                 	<li><a href="login.html">Login</a></li>
                 <? }else{ ?> 
-                	<li><a href="myprofile.html">Profile</a></li>
+                	<li><a href="myprofile.php">Profile</a></li>
                 <? } ?>	
                 <li class="active"><a href="signup.html">Sign-Up</a></li>
                 <li><a href="contact.php">Contact</a></li>
