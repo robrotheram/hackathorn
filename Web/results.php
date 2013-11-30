@@ -40,13 +40,12 @@
         </div>
       </div>
     </div>
-
    <div class="container">
    	<div class="container-fluid">
    		<div class="row-fluid">
    			<div class="sortable">
    				<div id="jobsBox" class="span4">
-   					<h3>Jobs</h3>
+   					<h3><a class="resultTitle" href="extendedresults.html">Jobs</a></h3>
    					<ul>
 							<li class="jobResult"></li>
 							<li class="jobResult"></li>
@@ -54,7 +53,7 @@
    					</ul>
    				</div>
    				<div id="coursesBox" class="span4">
-   					<h3>Courses</h3>
+   					<h3><a class="resultTitle" href="extendedresults.html">Courses</a></h3>
 						<ul>
 							<li class="courseResult"></li>
 							<li class="courseResult"></li>
@@ -62,7 +61,7 @@
    					</ul>   				
    				</div>
    				<div id="volunteerBox" class="span4">
-   					<h3>Volunteering</h3>
+   					<h3><a class="resultTitle" href="extendedresults.html">Volunteering</a></h3>
    					<ul>
 							<li class="volResult"></li>
 							<li class="volResult"></li>
@@ -74,7 +73,7 @@
    		<div class="row-fluid">
    			<div class="sortable">
    				<div id="internshipBox" class="span4">
-   					<h3>Internships</h3>
+   					<h3><a class="resultTitle" href="extendedresults.html">Internships</a></h3>
    					<ul>
 							<li class="internResult"></li>
 							<li class="internResult"></li>
@@ -82,7 +81,7 @@
    					</ul>
    				</div>
    				<div id="extraCurrBox" class="span4">
-   					<h3>Groups</h3>
+   					<h3><a class="resultTitle" href="extendedresults.html">Groups</a></h3>
 						<ul>
 							<li class="extraCurrResult"></li>
 							<li class="extraCurrResult"></li>
@@ -90,7 +89,7 @@
    					</ul>   				
    				</div>
    				<div id="mentorBox" class="span4">
-   					<h3>Alumni</h3>
+   					<h3><a class="resultTitle" href="extendedresults.html">Alumni</a></h3>
    					<!-- These should link to the alumi's user profile. -->
 						<ul>
 							<li class="mentorResult"></li>
