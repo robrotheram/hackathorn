@@ -18,7 +18,8 @@
   </head>
 
   <body background="logo1.png" style="background-repeat: no-repeat">
-
+  
+	
 
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
@@ -41,10 +42,11 @@
     </div>
 
     <div class="container">
-    	<form class="form-search">
+    	
+		<form action="results.php" method="POST">
 		    <div style="margin-top:10%; margin-left:12%" class="input-append">
-		        <input type="text" placeholder="What do you want to be?" class="span8 search-query">
-		        <button type="submit" class="btn">Discover</button>
+		        <input name="search" type="text" placeholder="What do you want to be?" class="span8"/>
+		        <input type="submit" value="Submit">
 		    </div>
 		</form>
     	<div class="bannerbottom">
