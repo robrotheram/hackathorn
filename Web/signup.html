@@ -64,14 +64,14 @@ $(document).ready(function(){
 		surname:sn,
 		dob:dob,
 		gender:gender,
-		postcode:pc
+		location:pc
     },
     function(data,status){
     	alert(data);
       var obj = jQuery.parseJSON(data);
       if(obj.success == "1"){
       	alert("You are now Signed up well done");
-      	window.location = "index1.html";
+      	window.location = "myprofile.php";
       }else{
       	alert("Incorrect username and/or password\n please try again");
       }
