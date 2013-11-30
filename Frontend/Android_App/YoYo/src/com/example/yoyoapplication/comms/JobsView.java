@@ -15,6 +15,7 @@ import com.example.yoyoapplication.R;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -39,17 +40,23 @@ ProgressDialog pDialog;
 	ListView list;
 	
 	//Make an arrayList containing all items
-	ArrayList<HashMap<String, String>> itemsList;
+	ArrayList<String> itemsList;
 	
 	//items array
 	JSONArray items = null;
+	
+	String searchTerm;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.jobs);
 		
+		Intent i = getIntent();
+		searchTerm = i.getStringExtra("search");
+		
 		list = (ListView) findViewById(R.id.jobsList);
+		itemsList = new ArrayList<String>();
 		
 		new GetAllJobs(this).execute();
 	}
@@ -64,7 +71,7 @@ ProgressDialog pDialog;
 	public void displayAllItems(){
 		String[] text = new String[itemsList.size()];
 		for(int i = 0; i < itemsList.size(); i++){
-			text[i]=(itemsList.get(i).get("title"));
+			text[i]=(itemsList.get(i));
 		}
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, 
 				android.R.layout.simple_list_item_1, android.R.id.text1, text);
@@ -91,8 +98,7 @@ ProgressDialog pDialog;
 		protected String doInBackground(String... arg0) {
 			// Building Parameters
 			List<NameValuePair> params = new ArrayList<NameValuePair>();
-			params.add(new BasicNameValuePair("location", ""));
-			params.add(new BasicNameValuePair("keyword", "doctor"));
+			params.add(new BasicNameValuePair("keyword", searchTerm));
 			
 			// getting JSON string from URL
 			JSONObject json = jParser.makeHTTPRequest(AGGREGATE_SEARCH, "POST", params);
@@ -102,9 +108,6 @@ ProgressDialog pDialog;
 
 			try {
 				// Checking for SUCCESS TAG
-				
-
-				
 					// products found
 					// Getting Array of Products
 					items = json.getJSONArray(TAG_JOBS);
@@ -114,7 +117,7 @@ ProgressDialog pDialog;
 						JSONObject c = items.getJSONObject(i);
 
 						// Storing each json item in variable
-						String title = c.getString(TAG_TITLE);
+						String title = c.getString("title");
 
 						// creating new HashMap
 						HashMap<String, String> map = new HashMap<String, String>();
@@ -123,7 +126,7 @@ ProgressDialog pDialog;
 						map.put("Title", title);
 
 						// adding HashList to ArrayList
-						itemsList.add(map);
+						itemsList.add(title);
 					}
 				
 			} catch (JSONException e) {
@@ -136,7 +139,7 @@ ProgressDialog pDialog;
 			// dismiss the dialog once got all details
 			pDialog.dismiss();
 			
-			Log.i("BLAAAARRRGGG", "Size of array is" + itemsList.size());
+			//Log.i("BLAAAARRRGGG", "Size of array is" + itemsList.size());
 			
 			displayAllItems();
 		}

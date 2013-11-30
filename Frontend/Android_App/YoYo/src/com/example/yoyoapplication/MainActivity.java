@@ -5,13 +5,18 @@ import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
+import android.widget.EditText;
 
 public class MainActivity extends Activity {
+	
+	EditText entryBox;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
+		
+		entryBox = (EditText) findViewById(R.id.edit_job);
 	}
 
 	@Override
@@ -23,7 +28,13 @@ public class MainActivity extends Activity {
 	
 	public void discoverClick(View view) {
 		//startActivity(new Intent("com.example.RESULTS"));
-		startActivity(new Intent("com.example.JOBS"));
+		String text = entryBox.getText().toString();
+		if(text == null){
+			text = "";
+		}
+		Intent i = new Intent("com.example.JOBS");
+		i.putExtra("search", text);
+		startActivity(i);
 	}
 	
 	public void registerClick(View view) {
