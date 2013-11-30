@@ -17,7 +17,7 @@
 background-image:url('newbackground.jpg');
 background-repeat:no-repeat;
 background-attachment:fixed;
-background-position:center; 
+background-position:9% 55%;
 
       }
     </style>
