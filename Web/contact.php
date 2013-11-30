@@ -1,3 +1,12 @@
+<?php
+	if(isset($_POST['email'])){	
+		$email = $_POST['email'];
+  			$message = $_POST['message'] ;
+		mail("robrotheram@gmail.com", "contact form",
+  		$message, "From:" . $_POST['name']);
+  		header('Location: completedemail.html');
+	}
+	?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -42,10 +51,10 @@
     	<!-- /container -->
     	<div class="span12">
             <div class="page-header">
-                    <h2>Send us a message</h2>
+                    <h2>Send Us A Message</h2>
             </div>
             <p>Let us know what you think! Just give us a few details about yourself first.</p>
-            <form method="post" action="">
+            <form method="post" action="contact.php">
                     <fieldset>
                         <div class="clearfix">
                             <label for="name"><span>Name:</span></label>
@@ -65,41 +74,13 @@
                                 <textarea tabindex="3" class="xxlarge" style="width:70%" id="comments" name="body" label="Message" rows="7"></textarea>
                             </div>
                         </div>
-                        <div class="actions">
-                            <input tabindex="4" href="completedmail.html" type="submit" id="submit" class="btn primary large" value="Send message">
-                        </div>
+                        <div class="actions"><a href="completedemail.html">
+                            <input tabindex="4"  type="submit" id="submit" class="btn primary large" value="Send message">
+                        </a></div>
                     </fieldset>
             </form>
 
-            <?php
-				if ($_POST['submit'])
-				{
-				  if(empty($_POST['name']) || empty($_POST['email']) || empty($_POST['comments']))
-				    { 
-				      $error = true;
-				    
-				    } else{
-
-				      $to = "leysh01@gmail.com";
-
-				      $name = trim($_POST['name']);
-				      $number = trim($_POST['number']);
-				      $email = trim($_POST['email']);
-				      $comments = trim($_POST['comments']);
-
-				      $subject = "Contact Form";
-
-				      $messages = "Name: $name \r\n Email: $email \r\n Comments: $comments";
-				      $headers = "From:" . $name;
-				      $mailsent = mail($to, $subject, $messages, $headers);
-
-				      if($mailsent){
-				        $sent = true;
-				        }
-				  }
-
-				}
-			?>
+            
     </div>
 </div>
     <!-- Le javascript

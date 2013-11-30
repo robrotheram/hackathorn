@@ -33,7 +33,7 @@
    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
    <link rel="shortcut icon" href="../assets/ico/favicon.png">
    
-   <!-- Database Connect javascripts ---!>
+   <!-- Database Connect javascripts -->
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
 </script>
 <script>
@@ -78,7 +78,7 @@ $(document).ready(function(){
           <a class="brand" href="index.html">YoYo</a>
           <div class="nav-collapse collapse pull-right">
             <ul class="nav">
-        			<li><a href="login.html">Login</a></li>
+        			<li class="active"><a href="login.html">Login</a></li>
         			<li><a href="signup.html">Sign-Up</a></li>
         			<li><a href="contact.php">Contact</a></li>
         		</ul>
@@ -88,25 +88,42 @@ $(document).ready(function(){
     </div>
    <div class="container">
    	<div class="span12">
-   		<div id="loginHeaderCont" class="span12">
-   			<h1>Login</h1>
-   		</div>
-   		
-   			<div id="loginFormCont" class="span12">
-					<div id="usernameCont" class="span6">   				
-   					<label for="usernameField">Username:</label>
-   					<input id="usernameField" name="uname" type="text"></input>
-   				</div>
-   				<div id="passwordCont" class="span6">
-   					<label for="passwordField">Password:</label>
-   					<input id="passwordField" name="pass" type="text"></input>
-   				</div>
-   				<div id="loginButtonCont" class="span12">
-   					<button>Submit</button>
-   				</div>
+   		        <div class="page-header">
+                    <h2>Login</h2>
+            </div>
+   		<div id="loginFormCont" class="span12">
+				<div id="usernameCont" class="span6">   				
+   				<label for="usernameField">Username:</label>
+   				<input id="usernameField" name="uname" type="text"></input>
    			</div>
-   		
+   			<div id="passwordCont" class="span6">
+   				<label for="passwordField">Password:</label>
+   				<input id="passwordField" name="pass" type="text"></input>
+   			</div>
+   			<div id="loginButtonCont" class="span12">
+   				<button>Submit</button>
+   			</div>
+   		</div>	
    	</div>
    </div>
+
+   <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+
+      $(document).ready(function(){
+        $("#titlemenu li").click(function(){
+          $("#titlemenu li").removeClass("active");
+          $(this).addClass("active");
+        });
+      })
+
+
+    </script>
 </body>
 </html>
+
+
+
