@@ -1,37 +1,44 @@
-div
+div.sortable
 {
-	margin: 10px;	
+	margin: 10px 0px;
+	padding:0px;
+	border-width: 1px;
+	border-color: #888;	
 }
-#jobsBox
+div.sortable h3
+{
+	margin:0;
+	padding:0px 10px;
+	font-size:14pt;
+	color:#fff;	
+}
+#jobsBox h3
 {
 	background-color:#CC0000;
+	width:100%;
 }
-#coursesBox
+#coursesBox h3
 {
-	background-color:#339900;	
+	background-color:#339900;
+	width:100%;	
 }
-#volunteerBox
+#volunteerBox h3
 {
-	background-color:#FFCC33;	
+	background-color:#FFCC33;
+	width:100%;	
 }
-#internshipBox
+#internshipBox h3
 {
-	background-color:#CC0066;	
+	background-color:#CC0066;
+	width:100%;	
 }
-#extraCurrBox
+#extraCurrBox h3
 {
-	background-color:#33CCCC;	
+	background-color:#33CCCC;
+	width:100%;	
 }
-#mentorBox
+#mentorBox h3
 {
-	background-color:#FF6600;	
-}
-.sortable
-{
-	margin: 0;
-	padding: 0;
-}
-.sortable:hover
-{
-	cursor:move;
+	background-color:#FF6600;
+	width:100%;	
 }
