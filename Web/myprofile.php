@@ -180,25 +180,31 @@ $(document).ready(function(){
           <input style="width:70%;height:100px;"id="disableInput" name="disable" type="text"></input>
         </div>
 
+		<div id="aboutmeInput" class="span12">
+          <label for="aboutmeInput">About Me:</label>        
+          <input style="width:70%;height:100px;"id="aboutmeInput" name="about" type="text"></input>
+        </div>
+        
+        
+        <div id="workexInput" class="span12">
+          <label for="workexInput">Work Experience:</label>        
+          <input style="width:70%;height:100px;"id="workexInput" name="workex" type="text"></input>
+        </div>
+        
+        <hr/>
+        <br/>
         <div id="qualificationInput" class="span12">
           <label for="qualificationInput">Qualifications:</label>        
           <input style="width:70%;height:100px;"id="qualificationInput" name="qualifications" type="text"></input>
         </div>
 
-         <div id="workexInput" class="span12">
-          <label for="workexInput">Work Experience:</label>        
-          <input style="width:70%;height:100px;"id="workexInput" name="workex" type="text"></input>
-        </div>
 
         <div id="hobbiesInput" class="span12">
           <label for="hobbiesInput">Hobbies or Interests:</label>        
           <input style="width:70%;height:100px;"id="hobbiesInput" name="hobbies" type="text"></input>
         </div>
 
-        <div id="aboutmeInput" class="span12">
-          <label for="aboutmeInput">About Me:</label>        
-          <input style="width:70%;height:100px;"id="aboutmeInput" name="about" type="text"></input>
-        </div>
+        
 
         <div id="submitInput" class="span12">
           <button>Submit</button>   
