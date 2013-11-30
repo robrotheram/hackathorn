@@ -44,17 +44,17 @@
    <div class="container">
    	<div class="container-fluid">
    		<div class="row-fluid">
-   			<div id="sortable">
-   				<div id="jobsBox" class="span4"><p>jobs</p></div>
-   				<div id="coursesBox" class="span4"><p>course</p></div>
-   				<div id="volunteerBox" class="span4"><p>volunteer</p></div>
+   			<div class="sortable">
+   				<div id="jobsBox" class="span4"><h3>jobs</h3></div>
+   				<div id="coursesBox" class="span4"><h3>course</h3></div>
+   				<div id="volunteerBox" class="span4"><h3>volunteer</h3></div>
    			</div>
    		</div>
    		<div class="row-fluid">
    			<div class="sortable">
-   				<div id="internshipBox" class="span4"><p>internship</p></div>
-   				<div id="extraCurrBox" class="span4"><p>extra curricular</p></div>
-   				<div id="mentorBox" class="span4"><p>mentors</p></div>
+   				<div id="internshipBox" class="span4"><h3>internship</h3></div>
+   				<div id="extraCurrBox" class="span4"><h3>extra curricular</h3></div>
+   				<div id="mentorBox" class="span4"><h3>mentors</h3></div>
    			</div>
    		</div>
    	</div>
@@ -62,15 +62,9 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="./jquery.js"></script>
     <script>
-
-    	$(document).ready(function(){
-    		$("#titlemenu li").click(function(){
-    			$("#titlemenu li").removeClass("active");
-    			$(this).addClass("active");
-    		});
-    	})
 		
 		$(document).ready(function() {
     		$( "#sortable,#sortable2" ).sortable({
