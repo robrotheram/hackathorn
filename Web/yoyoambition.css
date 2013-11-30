@@ -28,10 +28,19 @@ input.mainsearch
 	margin-top:9%;
 	margin-left:35%;
 }
+p
+{
+	margin: 20px 0px;	
+}
 p.tooltiptext
 {
 	font-size: 8pt;
 	font-style: italic;	
+}
+p.bigmessage
+{
+	font-size: 12pt;
+	font-style: bold;	
 }
 
 
