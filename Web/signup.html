@@ -1,36 +1,108 @@
 <!DOCTYPE html>
-<link rel="stylesheet" type="text/css" href="reset.css" media="screen" />
-<link rel="stylesheet" type="text/css" href="yoyoambition.css" media="screen" />
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+   <title>YoYo | Ambition</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="">
+   <meta name="author" content="Matt" >
 
-<!-- Sign-Up page by Matt Adshead. Stopped development temporarily due to bootstrap? -->
+   <!-- Le styles -->
+   <link href="reset.css" rel="stylesheet">
+   <link href="./INC/bootstrap/css/bootstrap.css" rel="stylesheet">
+   <style>
+   	body {
+      	padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+   </style>
+   <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+   <link href="yoyoambition.css" rel="stylesheet">
+   <link href="login.css" rel="stylesheet">
+   
 
-<html>
+   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+   <!--[if lt IE 9]>
+   	<script src="../assets/js/html5shiv.js"></script>
+   <![endif]-->
+
+   <!-- Fav and touch icons -->
+   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+   <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+   <link rel="shortcut icon" href="../assets/ico/favicon.png">
+</head>
 <body>
-	<div id="signup-container">
-		<h1>Sign-Up</h2>
+	<div class="navbar navbar-inverse navbar-fixed-top">
+     	<div class="navbar-inner">
+    		<div class="container">
+        		<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+           		<span class="icon-bar"></span>
+           		<span class="icon-bar"></span>
+           		<span class="icon-bar"></span>
+        		</button>
+        		<a class="brand" href="#">YoYo</a>
+     			<div class="nav-collapse collapse pull-right">
+        			<ul class="nav">
+        				<li><a href="login.html">Login</a></li>
+        				<li class="active"><a href="signup.html">Sign-Up</a></li>
+        				<li><a href="contact.php">Contact</a></li>
+        			</ul>
+     			</div><!--/.nav-collapse -->
+  			</div>
+  		</div>
+	</div>
+   <div class="container">
+		<h1 class="darktext">Sign-Up</h2>
 		<form>
 			<div id="credInputs">
-				<label for="emailField">Email Address:</label>
-				<input id="emailField" name="email" type="email"></input><br />
-				<label for="passField">Password:</label>
-				<input id="passField" name="password" type="password"></input><br />
-				<label for="passConfField">Confirm Password:</label>
-				<input id="passConfField" name="password-conf" type="password"></input><br />
+				<div id="emailInput" class="span12">
+					<label for="emailField">Email Address:</label>
+					<input id="emailField" name="email" type="email"></input><br />
+				</div>
+				<div id="passInput" class="span5">
+					<label for="passField">Password:</label>
+					<input id="passField" name="password" type="password"></input>
+				</div>
+				<div id="passConfInput" class="span5">
+					<label for="passConfField">Confirm Password:</label>
+					<input id="passConfField" name="password-conf" type="password"></input>
+				</div>
 			</div>
 			<div id="personInputs">
-				<label for="fNameField">First Name:</label>
-				<input id="fNameField" name="forename" type="text"></input><br />
-				<label for="sNameField">Last Name:</label>
-				<input id="sNameField" name="surname" type="text"></input><br />
-				<label for="dobField">Date of Birth:</label>				
-				<input id="dobField" name="dob" type="date"></input><br />
-				<label for="genderRadio">Gender:</label>
-				<input class="genderRadio" type="radio" name="gender" value="male">Male</input>
-				<input class="genderRadio" type="radio" name="gender" value="female">Female</input><br />
+				<div id="nameInputs">
+					<div id="fNameInput" class="span5">				
+						<label for="fNameField">First Name:</label>
+						<input id="fNameField" name="forename" type="text"></input>
+					</div>
+					<div id="sNameInput" class="span5">						
+						<label for="sNameField">Last Name:</label>
+						<input id="sNameField" name="surname" type="text"></input>
+					</div>
+				</div>
+				<div id="dobInput" class="span5">
+					<label for="dobField">Date of Birth:</label>				
+					<input id="dobField" name="dob" type="date"></input>
+				</div>
+				<div id="genderInput" class="span5">					
+					<input id="maleRadio" class="genderRadio" type="radio" name="gender" value="male">
+						<label class="radioLabel" for="maleRadio">Male</label>					
+					</input>
+					<input id="femaleRadio" class="genderRadio" type="radio" name="gender" value="female">
+						<label class="radioLabel" for="femaleRadio">Female</label>					
+					</input>
+				</div>
 			</div>
-			<p>Apparently bootstrap means I don't need to do this page any more. I'll just leave this here for now.</p>
-		</form>
+			<div id="addressInputs" class="span12">
+				<label for="postcodeField">Post Code:</label>
+				<input id="postcodeField" name="postcode" type="text"></input>	
+			</div>
+			<div id="submitInput" class="span12">
+				<input id="submitButton" name="submit" value="Submit" type="submit"></input>			
+			</div>
+		</form>	
 	</div>
-
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

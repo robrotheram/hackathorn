@@ -77,19 +77,22 @@ $(document).ready(function(){
         		<a class="brand" href="#">YoYo</a>
      			<div class="nav-collapse collapse pull-right">
         			<ul class="nav">
-        				<li class="active"><a href="#">Home</a></li>
-        				<li><a href="#about">Login</a></li>
-        				<li><a href="#contact">Contact</a></li>
+        				<li class="active"><a href="login.html">Login</a></li>
+        				<li><a href="signup.html">Sign-Up</a></li>
+        				<li><a href="contact.php">Contact</a></li>
         			</ul>
      			</div><!--/.nav-collapse -->
   			</div>
   		</div>
 	</div>
    <div class="container">
-   	<div class="span12">
-   		<div id="loginHeaderCont" class="span12">
-   			<h1>Login</h1>
+   	<h1>Login</h1>
+   	<form>
+			<div id="usernameCont" class="span5">   				
+   			<label for="usernameField">Username:</label>
+   			<input id="usernameField" name="username" type="text"></input>
    		</div>
+<<<<<<< HEAD
    		
    			<div id="loginFormCont" class="span12">
 					<div id="usernameCont" class="span6">   				
@@ -106,6 +109,18 @@ $(document).ready(function(){
    			</div>
    		
    	</div>
+=======
+   		<div id="passwordCont" class="span5">
+   			<label for="passwordField">Password:</label>
+   			<input id="passwordField" name="password" type="text"></input>
+   		</div>
+   		<div id="loginButtonCont" class="span12">
+   			<input id="loginButton" name="login" value="Login" type="submit"></input>
+   		</div>
+   	</form>
+>>>>>>> f84a383c0d76eae37a49e29b83ced6aac18a77ac
    </div>
+   <script src="https://code.jquery.com/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

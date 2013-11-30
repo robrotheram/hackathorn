@@ -1,4 +1,8 @@
 input.genderRadio
 {
-	margin: 0px 10px;	
+	margin: 10px 10px;	
+}
+label.radioLabel
+{
+	display:inline;
 }
