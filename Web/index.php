@@ -64,12 +64,7 @@
   </head>
 
   <body background="logo1.png" style="background-repeat: no-repeat">
-<<<<<<< HEAD
 
-  <form id="srch" method="post">
-
-=======
->>>>>>> 1dd5bb8b890327ca208b7598324aa4bf31988a9e
   <form id="srch" method="post" action="results.php">
   <input type="hidden" id="json" name="json"/>
   </form>
