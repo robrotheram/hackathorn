@@ -86,6 +86,19 @@ $(document).ready(function(){
           <div class="nav-collapse collapse pull-right">
               <ul class="nav">
 
+                <li><a href="login.html">Home</a></li>
+                <li class="dropdown">
+                	<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                		Notifications 
+                		<b class="caret"></b>
+                	</a>
+                	<ul class="dropdown-menu">
+                		<li class="nav-header"> Messages </li>
+                		<li class="nav-header"> Opportunities </li>
+                		<li class="nav-header"> Shares </li>
+                	</ul>
+                </li>
+
                 <?php if($user ==null){?>
                 	<li><a href="login.html">Login</a></li>
                 <? }else{ ?> 
