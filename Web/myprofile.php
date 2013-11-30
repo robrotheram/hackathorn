@@ -209,6 +209,14 @@ $(document).ready(function(){
         <div id="submitInput" class="span12">
           <button>Submit</button>   
         </div>
+    	<div class="bannerbottom">
+    		<center>
+			<script type="text/javascript" src="http://www.reddit.com/static/button/button1.js"></script>
+			<script src="https://platform.linkedin.com/in.js" type="text/javascript"></script>
+			<script type="IN/Share" data-counter="right"></script>
+			<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.yoyoambition.com">Tweet</a>
+			</center>
+    	</div> 
 
     </div>
       
@@ -256,5 +264,12 @@ $(document).ready(function(){
   });
 })(jQuery, window, 200); // 200 is the delay in milliseconds
 </script>
+	<script>
+		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+		if(!d.getElementById(id)){js=d.createElement(s);
+		js.id=id;js.src=p+'://platform.twitter.com/widgets.js';
+		fjs.parentNode.insertBefore(js,fjs);}}
+		(document, 'script', 'twitter-wjs');
+	</script>
 </body>
 </html>

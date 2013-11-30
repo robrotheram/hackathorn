@@ -78,12 +78,6 @@
       <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="brand" href="index.php">YoYo</a>
           <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -128,7 +122,12 @@
 		    </div>
 		
     	<div class="bannerbottom">
-    		<p><center style="margin-bottom:10px"><a href="#">Filter Results</a></center></a></p>
+    		<center>
+			<script type="text/javascript" src="http://www.reddit.com/static/button/button1.js"></script>
+			<script src="https://platform.linkedin.com/in.js" type="text/javascript"></script>
+			<script type="IN/Share" data-counter="right"></script>
+			<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.yoyoambition.com">Tweet</a>
+			</center>
     	</div> 
     	<!-- /container -->
 	</div>
@@ -190,6 +189,14 @@
 })(jQuery, window, 200); // 200 is the delay in milliseconds
 </script>
 
+	<script>
+		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+		if(!d.getElementById(id)){js=d.createElement(s);
+		js.id=id;js.src=p+'://platform.twitter.com/widgets.js';
+		fjs.parentNode.insertBefore(js,fjs);}}
+		(document, 'script', 'twitter-wjs');
+	</script>
+	
   </body>
 </html>
 
