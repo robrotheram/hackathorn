@@ -29,20 +29,29 @@
 		  
 		
 	?>
+	
+	   <!-- Database Connect javascripts -->
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
 	<script>
 	$(document).ready(function(){
-		$("button").click(function(){
-		var un = document.getElementById("search").value;
-		$.post("aggregate_search.php",
-		{
-		  keyword:un,
-		  location:<?echo $loc ?> 
-		},
-		alert(un);
-		});
-	});
-	$js = $_POST['json-ouput'];
-	</script>
+		  $("button").click(function(){
+				var un = document.getElementById("search").value;
+				var loc = "<? echo $loc; ?>";
+				 $.post("aggregate_search.php",
+					{
+					  location: un,
+					  keyword: loc
+					},
+					function(data,status){
+						//alert(data);
+						document.getElementById('json').value = "test";
+			    });
+  });
+});
+</script>
+	
+	
 	
 	
 	
@@ -53,6 +62,9 @@
   </head>
 
   <body background="logo1.png" style="background-repeat: no-repeat">
+  <form id="srch" method="post">
+  <input type="hidden" id="json" name="json"/>
+  </form>
   
 	
 
@@ -78,13 +90,12 @@
 
     <div class="container">
     	
-		
-		
+	
 		    <div style="margin-top:10%; margin-left:12%" class="input-append">
 		        <input id="search" name="search" type="text" placeholder="What do you want to be?" class="span8"/>
-		        <button class="btn">Submit</button>
+		        <button class="btn btn-primary">Sign In</button>	
 		    </div>
-		</form>
+		
     	<div class="bannerbottom">
     		<p><center style="margin-bottom:10px"><a href="#">Filter Results</a></center></a></p>
     	</div> 
