@@ -85,6 +85,8 @@ $(document).ready(function(){
             <a class="brand" href="index.html">YoYo</a>
           <div class="nav-collapse collapse pull-right">
               <ul class="nav">
+                <li><a href="login.html">Home</a></li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Notifications <b class="caret"></b></a><ul class="dropdown-menu"><li> Messages </li><li class="divider"></li><li class="nav-header"> Oppertunitites </li><li> Shares </li></ul></li>
                 <?php if($user ==null){?>
                 	<li><a href="login.html">Login</a></li>
                 <? }else{ ?> 
