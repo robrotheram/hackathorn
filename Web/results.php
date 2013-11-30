@@ -78,23 +78,23 @@
    						<td>Location</td>
    					</tr>
    					<tr>
-   						<td><?echo $jdata->jobs->jobs->jobs[0]->title;?></td>
-   						<td><?echo $jdata->jobs->jobs->jobs[0]->locations;?></td>
+   						<td><?echo $jdata->jobs->jobs[0]->title;?></td>
+   						<td><?echo $jdata->jobs->jobs[0]->locations;?></td>
    						
    					</tr>
    					<tr>
-   						<td><?echo $jdata->jobs->jobs->jobs[1]->title;?></td>
-   						<td><?echo $jdata->jobs->jobs->jobs[1]->locations;?></td>
+   						<td><?echo $jdata->jobs->jobs[1]->title;?></td>
+   						<td><?echo $jdata->jobs->jobs[1]->locations;?></td>
    						
    					</tr>
    					<tr>
-   						<td><?echo $jdata->jobs->jobs->jobs[2]->title;?></td>
-   						<td><?echo $jdata->jobs->jobs->jobs[2]->locations;?></td>
+   						<td><?echo $jdata->jobs->jobs[2]->title;?></td>
+   						<td><?echo $jdata->jobs->jobs[2]->locations;?></td>
    						
    					</tr>
    					<tr>
-   						<td><?echo $jdata->jobs->jobs->jobs[3]->title;?></td>
-   						<td><?echo $jdata->jobs->jobs->jobs[3]->locations;?></td>
+   						<td><?echo $jdata->jobs->jobs[3]->title;?></td>
+   						<td><?echo $jdata->jobs->jobs[3]->locations;?></td>
    						
    					</tr>
 					</table>
