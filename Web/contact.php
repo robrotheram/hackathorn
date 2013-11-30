@@ -4,7 +4,7 @@
   			$message = $_POST['message'] ;
 		mail("robrotheram@gmail.com", "contact form",
   		$message, "From:" . $_POST['name']);
-  		echo "Thank you for using our mail form";
+  		header('Location: completedemail.html');
 	}
 	?>
 <!DOCTYPE html>
@@ -51,7 +51,7 @@
     	<!-- /container -->
     	<div class="span12">
             <div class="page-header">
-                    <h2>Send us a message</h2>
+                    <h2>Send Us A Message</h2>
             </div>
             <p>Let us know what you think! Just give us a few details about yourself first.</p>
             <form method="post" action="contact.php">

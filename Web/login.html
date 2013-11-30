@@ -33,7 +33,7 @@
    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
    <link rel="shortcut icon" href="../assets/ico/favicon.png">
    
-   <!-- Database Connect javascripts ---!>
+   <!-- Database Connect javascripts -->
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
 </script>
 <script>
@@ -88,9 +88,9 @@ $(document).ready(function(){
     </div>
    <div class="container">
    	<div class="span12">
-   		<div id="page-header">
-   			<h2>Login</h2>
-   		</div>
+   		        <div class="page-header">
+                    <h2>Login</h2>
+            </div>
    		<div id="loginFormCont" class="span12">
 				<div id="usernameCont" class="span6">   				
    				<label for="usernameField">Username:</label>
@@ -106,5 +106,24 @@ $(document).ready(function(){
    		</div>	
    	</div>
    </div>
+
+   <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+
+      $(document).ready(function(){
+        $("#titlemenu li").click(function(){
+          $("#titlemenu li").removeClass("active");
+          $(this).addClass("active");
+        });
+      })
+
+
+    </script>
 </body>
 </html>
+
+
+
