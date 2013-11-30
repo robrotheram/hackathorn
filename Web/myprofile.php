@@ -86,7 +86,7 @@ $(document).ready(function(){
           <div class="nav-collapse collapse pull-right">
               <ul class="nav">
 
-                <li><a href="login.php">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li class="dropdown">
                 	<a class="dropdown-toggle" data-toggle="dropdown" href="#">
                 		Notifications 
@@ -102,9 +102,9 @@ $(document).ready(function(){
                 <?php if($user ==null){?>
                 	<li><a href="login.html">Login</a></li>
                 <? }else{ ?> 
-                	<li><a href="myprofile.php">Profile</a></li>
+                	<li class="active"><a href="myprofile.php">Profile</a></li>
                 <? } ?>	
-                <li class="active"><a href="signup.html">Sign-Up</a></li>
+                <li><a href="signup.html">Sign-Up</a></li>
                 <li><a href="contact.php">Contact</a></li>
               </ul>
           </div><!--/.nav-collapse -->
