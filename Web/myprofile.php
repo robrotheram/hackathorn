@@ -1,3 +1,8 @@
+<?php
+	session_start();	
+	$user = $_SESSION['userid'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,52 +42,33 @@
    
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script>
+var obj;
 $(document).ready(function(){
-  $("button").click(function(){
-    var email = document.getElementById("emailField").value;
-  var passField = document.getElementById("passField").value;
-  var passFieldCon = document.getElementById("passConfField").value;
-  var fn = document.getElementById("fNameField").value;
-  var sn = document.getElementById("sNameField").value;
-  var dob = document.getElementById("dobField").value;
-  var pc = document.getElementById("postcodeField").value;
-  var gender ="bi";
-  if(document.getElementById('maleRadio').checked) {
-    gender = "male";
-  }else{
-    gender = "female";
-  }
-  
-  
-  
-  if(passField == passFieldCon){
-      $.post("user-profile-registration.php",
-    {
-      username:email,
-        pass:passField,
-        forename:fn,
-    surname:sn,
-    dob:dob,
-    gender:gender,
-    postcode:pc
-    },
-    function(data,status){
-      alert(data);
-      var obj = jQuery.parseJSON(data);
-      if(obj.success == "1"){
-        alert("You are now Signed up well done");
-        window.location = "index1.html";
-      }else{
-        alert("Incorrect username and/or password\n please try again");
-      }
-      
-    }); 
-      
-    }else{
-      alert("passwords do not match");
-    }
-  });
+	$.get( "getusertest.php", function( data ) {
+  		obj = jQuery.parseJSON(data);		
+		//alert(obj.message.username);
+		var input = $('#fNameField');
+    	input.val(obj.message.forename);
+    	var input2 = $('#sNameField');
+    	input2.val(obj.message.surname);
+    	var input3 = $('#postcodeField');
+    	input3.val(obj.message.location);
+    	var input4 = $('#emailField');
+    	input4.val(obj.message.username);
+    	document.getElementById('dobField').value = obj.message.dob;
+		
+		if(obj.message.gender == 'male'){
+			document.getElementById('maleRadio').checked = true;
+		}else{
+			document.getElementById('femaleRadio').checked = true;
+		};
+		
+		
+		
+		
+		
 });
+	});
 </script>
    
    
@@ -101,7 +87,11 @@ $(document).ready(function(){
               <ul class="nav">
                 <li><a href="login.html">Home</a></li>
                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Notifications <b class="caret"></b></a><ul class="dropdown-menu"><li> Messages </li><li class="divider"></li><li class="nav-header"> Oppertunitites </li><li> Shares </li></ul></li>
-                <li><a href="login.html">Login</a></li>
+                <?php if($user ==null){?>
+                	<li><a href="login.html">Login</a></li>
+                <? }else{ ?> 
+                	<li><a href="myprofile.php">Profile</a></li>
+                <? } ?>	
                 <li class="active"><a href="signup.html">Sign-Up</a></li>
                 <li><a href="contact.php">Contact</a></li>
               </ul>
@@ -113,7 +103,7 @@ $(document).ready(function(){
          <div class="page-header">
                     <h2>My Profile</h2>
             </div>
-   
+   	
       <div id="profilepic">     
         <img src="images/qmark.jpg" alt="profile pic" width="200" height="120" /> 
         <p><a href="#" class="btn btn-default" role="button" style="margin-left:16px">Change profile picture.</a></p> 
