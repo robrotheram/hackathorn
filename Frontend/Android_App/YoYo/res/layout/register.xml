@@ -125,7 +125,8 @@
 	    <TextView
 	        android:id="@+id/tv_password"
 	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content" />
+	        android:layout_height="wrap_content"
+	        android:text="Password" />
 	    
 	    <EditText
 	        android:id="@+id/et_password"
@@ -134,13 +135,14 @@
 	        android:text="Password"
 	        android:inputType="textPassword" />
     
-	    	<Button
-	    		android:id="@+id/btn_register"
-	    		android:layout_width="match_parent"
-	    		android:layout_height="wrap_content"
-	    		android:text="Register"
-				android:onClick="registerClick" />
-	    
+    	<Button
+    		android:id="@+id/btn_register"
+    		android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    		android:text="Register"
+			android:onClick="registerClick" />
+	    	
+	    	
     </LinearLayout>
     
 
