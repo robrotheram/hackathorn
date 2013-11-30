@@ -2,7 +2,9 @@ package com.example.yoyoapplication;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
+import android.view.View;
 
 public class MainActivity extends Activity {
 
@@ -19,15 +21,16 @@ public class MainActivity extends Activity {
 		return true;
 	}
 	
-	public void discoverClick() {
+	public void discoverClick(View view) {
+		Intent resultsPage = new Intent("com.example.RESULTS");
+		startActivity(resultsPage);
+	}
+	
+	public void registerClick(View view) {
 		
 	}
 	
-	public void registerClick() {
-		
-	}
-	
-	public void loginClick() {
+	public void loginClick(View view) {
 		
 	}
 	

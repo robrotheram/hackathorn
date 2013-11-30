@@ -7,23 +7,36 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
-    
-    <TextView
-        android:id="@+id/txt_FDF"
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="70dp"
-        android:text="@string/FDF" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="registerClick"
+            android:text="@string/btn_register" />
+
+        <Button
+            android:id="@+id/btn_log_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="loginClick"
+            android:text="@string/btn_log_in" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/ll_search_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txt_FDF"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
+        android:layout_centerVertical="true"
         android:orientation="horizontal" >
 
         <EditText
@@ -38,31 +51,18 @@
             android:id="@+id/btn_discover"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/btn_discover"
-            android:onClick="discoverClick" />
+            android:onClick="discoverClick"
+            android:text="@string/btn_discover" />
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/ll_bottom_bar"
+    <TextView
+        android:id="@+id/txt_FDF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/ll_search_bar"
-        android:orientation="horizontal" >
-
-        <Button
-            android:id="@+id/btn_register"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/btn_register"
-            android:onClick="registerClick" />
-
-        <Button
-            android:id="@+id/btn_log_in"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/btn_log_in"
-            android:onClick="loginClick" />
-    </LinearLayout>
+        android:layout_above="@+id/ll_search_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:text="@string/FDF"
+        android:textSize="25sp" />
 
 </RelativeLayout>
