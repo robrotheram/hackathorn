@@ -45,16 +45,59 @@
    	<div class="container-fluid">
    		<div class="row-fluid">
    			<div class="sortable">
-   				<div id="jobsBox" class="span4"><h3>jobs</h3></div>
-   				<div id="coursesBox" class="span4"><h3>course</h3></div>
-   				<div id="volunteerBox" class="span4"><h3>volunteer</h3></div>
+   				<div id="jobsBox" class="span4">
+   					<h3>Jobs</h3>
+   					<ul>
+							<li class="jobResult"></li>
+							<li class="jobResult"></li>
+							<li class="jobResult"></li>   					
+   					</ul>
+   				</div>
+   				<div id="coursesBox" class="span4">
+   					<h3>Courses</h3>
+						<ul>
+							<li class="courseResult"></li>
+							<li class="courseResult"></li>
+							<li class="courseResult"></li>   					
+   					</ul>   				
+   				</div>
+   				<div id="volunteerBox" class="span4">
+   					<h3>Volunteering</h3>
+   					<ul>
+							<li class="volResult"></li>
+							<li class="volResult"></li>
+							<li class="volResult"></li>   					
+   					</ul>
+   				</div>
    			</div>
    		</div>
    		<div class="row-fluid">
    			<div class="sortable">
-   				<div id="internshipBox" class="span4"><h3>internship</h3></div>
-   				<div id="extraCurrBox" class="span4"><h3>extra curricular</h3></div>
-   				<div id="mentorBox" class="span4"><h3>mentors</h3></div>
+   				<div id="internshipBox" class="span4">
+   					<h3>Internships</h3>
+   					<ul>
+							<li class="internResult"></li>
+							<li class="internResult"></li>
+							<li class="internResult"></li>   					
+   					</ul>
+   				</div>
+   				<div id="extraCurrBox" class="span4">
+   					<h3>Groups</h3>
+						<ul>
+							<li class="extraCurrResult"></li>
+							<li class="extraCurrResult"></li>
+							<li class="extraCurrResult"></li>   					
+   					</ul>   				
+   				</div>
+   				<div id="mentorBox" class="span4">
+   					<h3>Alumni</h3>
+   					<!-- These should link to the alumi's user profile. -->
+						<ul>
+							<li class="mentorResult"></li>
+							<li class="mentorResult"></li>
+							<li class="mentorResult"></li>   					
+   					</ul>   				
+   				</div>
    			</div>
    		</div>
    	</div>
