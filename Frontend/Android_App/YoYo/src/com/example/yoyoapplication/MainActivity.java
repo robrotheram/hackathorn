@@ -30,7 +30,7 @@ public class MainActivity extends Activity {
 	}
 	
 	public void loginClick(View view) {
-		
+		startActivity(new Intent("com.example.LOGIN"));
 	}
 	
 }
