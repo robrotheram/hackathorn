@@ -78,23 +78,23 @@
    						<td>Location</td>
    					</tr>
    					<tr>
-   						<td><?echo $jdata->jobs->jobs[0]->title;?></td>
-   						<td><?echo $jdata->jobs->jobs[0]->locations;?></td>
+   						<td><?echo $jdata->jobs[0]->title;?></td>
+   						<td><?echo $jdata->jobs[0]->locations;?></td>
    						
    					</tr>
    					<tr>
-   						<td><?echo $jdata->jobs->jobs[1]->title;?></td>
-   						<td><?echo $jdata->jobs->jobs[1]->locations;?></td>
+   						<td><?echo $jdata->jobs[1]->title;?></td>
+   						<td><?echo $jdata->jobs[1]->locations;?></td>
    						
    					</tr>
    					<tr>
-   						<td><?echo $jdata->jobs->jobs[2]->title;?></td>
-   						<td><?echo $jdata->jobs->jobs[2]->locations;?></td>
+   						<td><?echo $jdata->jobs[2]->title;?></td>
+   						<td><?echo $jdata->jobs[2]->locations;?></td>
    						
    					</tr>
    					<tr>
-   						<td><?echo $jdata->jobs->jobs[3]->title;?></td>
-   						<td><?echo $jdata->jobs->jobs[3]->locations;?></td>
+   						<td><?echo $jdata->jobs[3]->title;?></td>
+   						<td><?echo $jdata->jobs[3]->locations;?></td>
    						
    					</tr>
 					</table>
@@ -202,5 +202,47 @@
 		fjs.parentNode.insertBefore(js,fjs);}}
 		(document, 'script', 'twitter-wjs');
 	</script>
+	
+	  <script>
+(function ($, window, delay) {
+  // http://jsfiddle.net/AndreasPizsa/NzvKC/
+  var theTimer = 0;
+  var theElement = null;
+    var theLastPosition = {x:0,y:0};
+  $('[data-toggle]')
+    .closest('li')
+    .on('mouseenter', function (inEvent) {
+    if (theElement) theElement.removeClass('open');
+    window.clearTimeout(theTimer);
+    theElement = $(this);
+
+    theTimer = window.setTimeout(function () {
+      theElement.addClass('open');
+    }, delay);
+  })
+    .on('mousemove', function (inEvent) {
+        if(Math.abs(theLastPosition.x - inEvent.ScreenX) > 4 || 
+           Math.abs(theLastPosition.y - inEvent.ScreenY) > 4)
+        {
+            theLastPosition.x = inEvent.ScreenX;
+            theLastPosition.y = inEvent.ScreenY;
+            return;
+        }
+        
+    if (theElement.hasClass('open')) return;
+    window.clearTimeout(theTimer);
+    theTimer = window.setTimeout(function () {
+      theElement.addClass('open');
+    }, delay);
+  })
+    .on('mouseleave', function (inEvent) {
+    window.clearTimeout(theTimer);
+    theElement = $(this);
+    theTimer = window.setTimeout(function () {
+      theElement.removeClass('open');
+    }, delay);
+  });
+})(jQuery, window, 200); // 200 is the delay in milliseconds
+</script>
   </body>
 </html>

@@ -41,7 +41,6 @@
 				 $.post("aggregate_search.php",
 					{
 
-					  location: loc,
 					  keyword: un
 					},
 					function(data,status){
@@ -64,9 +63,6 @@
   </head>
 
   <body background="logo1.png" style="background-repeat: no-repeat">
-
-
-  <form id="srch" method="post">
 
 
   <form id="srch" method="post" action="results.php">
