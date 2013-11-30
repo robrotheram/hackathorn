@@ -90,7 +90,7 @@ background-position:9% 55%;
           <div class="nav-collapse collapse pull-right">
               <ul class="nav">
 
-                <li><a href="index.php">Home</a></li>
+                <li class="active"><a href="index.php">Home</a></li>
                 <li class="dropdown">
                 	<a class="dropdown-toggle" data-toggle="dropdown" href="#">
                 		Notifications 
@@ -108,7 +108,7 @@ background-position:9% 55%;
                 <? }else{ ?> 
                 	<li><a href="myprofile.php">Profile</a></li>
                 <? } ?>	
-                <li class="active"><a href="signup.html">Sign-Up</a></li>
+                <li><a href="signup.html">Sign-Up</a></li>
                 <li><a href="contact.php">Contact</a></li>
               </ul>
           </div><!--/.nav-collapse -->
