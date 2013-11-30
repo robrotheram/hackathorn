@@ -15,6 +15,14 @@
     // Override point for customization after application launch.
     return YES;
 }
+
+-(void)customAppearance
+{
+   // _window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"logo1.png"]];
+    //_window.backgroundColor = [UIImage imageNamed:@"logo1.png"];
+   // UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo1.png"]];
+    //[self.view addSubview:backgroundView];
+}
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {

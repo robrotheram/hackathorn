@@ -21,6 +21,8 @@
 		602304DE1848F7C5006FC4D4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 602304C01848F7C5006FC4D4 /* UIKit.framework */; };
 		602304E61848F7C5006FC4D4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 602304E41848F7C5006FC4D4 /* InfoPlist.strings */; };
 		602304E81848F7C5006FC4D4 /* YoYo_AmbitionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 602304E71848F7C5006FC4D4 /* YoYo_AmbitionTests.m */; };
+		602304F21849AFE4006FC4D4 /* logo1.png in Resources */ = {isa = PBXBuildFile; fileRef = 602304F11849AFE4006FC4D4 /* logo1.png */; };
+		602304FC1849C779006FC4D4 /* logo1____.png in Resources */ = {isa = PBXBuildFile; fileRef = 602304FB1849C779006FC4D4 /* logo1____.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		602304E31848F7C5006FC4D4 /* YoYo AmbitionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "YoYo AmbitionTests-Info.plist"; sourceTree = "<group>"; };
 		602304E51848F7C5006FC4D4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		602304E71848F7C5006FC4D4 /* YoYo_AmbitionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YoYo_AmbitionTests.m; sourceTree = "<group>"; };
+		602304F11849AFE4006FC4D4 /* logo1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo1.png; sourceTree = "<group>"; };
+		602304FB1849C779006FC4D4 /* logo1____.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo1____.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,8 @@
 		602304B01848F7C5006FC4D4 = {
 			isa = PBXGroup;
 			children = (
+				602304FB1849C779006FC4D4 /* logo1____.png */,
+				602304F11849AFE4006FC4D4 /* logo1.png */,
 				602304C21848F7C5006FC4D4 /* YoYo Ambition */,
 				602304E11848F7C5006FC4D4 /* YoYo AmbitionTests */,
 				602304BB1848F7C5006FC4D4 /* Frameworks */,
@@ -230,6 +236,8 @@
 			files = (
 				602304D51848F7C5006FC4D4 /* Images.xcassets in Resources */,
 				602304C71848F7C5006FC4D4 /* InfoPlist.strings in Resources */,
+				602304F21849AFE4006FC4D4 /* logo1.png in Resources */,
+				602304FC1849C779006FC4D4 /* logo1____.png in Resources */,
 				602304D01848F7C5006FC4D4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
