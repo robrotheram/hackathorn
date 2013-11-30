@@ -61,14 +61,39 @@ $(document).ready(function(){
 			document.getElementById('maleRadio').checked = true;
 		}else{
 			document.getElementById('femaleRadio').checked = true;
-		};
-		
-		
-		
-		
-		
-});
+		};	
 	});
+	
+	$("button").click(function(){
+		
+	var email = document.getElementById("emailField").value;
+	var fn = document.getElementById("fNameField").value;
+	var sn = document.getElementById("sNameField").value;
+	var dob = document.getElementById("dobField").value;
+	var pc = document.getElementById("postcodeField").value;
+
+	var we = document.getElementById("workexInput").value;
+	var dis = document.getElementById("disableInput").value;
+	var ab = document.getElementById("aboutmeInput").value;
+	var gender ="bi";
+	
+	if(document.getElementById('maleRadio').checked) {
+		gender = "male";
+	}else{
+		gender = "female";
+	}
+	
+	var sp = 'yes';
+	if(document.getElementById('supportYes').checked) {
+		sp = 'yes';
+	}else{
+		sp = 'no';
+	}
+	
+	alert('yesy');
+	
+  });
+});
 </script>
    
    
@@ -86,7 +111,7 @@ $(document).ready(function(){
           <div class="nav-collapse collapse pull-right">
               <ul class="nav">
 
-                <li><a href="index.php">Home</a></li>
+                <li><a href="login.php">Home</a></li>
                 <li class="dropdown">
                 	<a class="dropdown-toggle" data-toggle="dropdown" href="#">
                 		Notifications 
@@ -102,9 +127,9 @@ $(document).ready(function(){
                 <?php if($user ==null){?>
                 	<li><a href="login.html">Login</a></li>
                 <? }else{ ?> 
-                	<li class="active"><a href="myprofile.php">Profile</a></li>
+                	<li><a href="myprofile.php">Profile</a></li>
                 <? } ?>	
-                <li><a href="signup.html">Sign-Up</a></li>
+                <li class="active"><a href="signup.html">Sign-Up</a></li>
                 <li><a href="contact.php">Contact</a></li>
               </ul>
           </div><!--/.nav-collapse -->
