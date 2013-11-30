@@ -18,6 +18,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    //change background image
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"logo1____.png"]];
 }
 
 - (void)didReceiveMemoryWarning

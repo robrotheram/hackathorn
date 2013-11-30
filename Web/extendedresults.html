@@ -9,6 +9,7 @@
 
     <!-- Le styles -->
     <link href="./INC/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="./INC/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="./yoyoambition.css" rel="stylesheet">
     <style>
       body {
@@ -17,8 +18,7 @@
     </style>
   </head>
 
-  <body background="logo1.png" style="background-repeat: no-repeat">
-
+  <body>
 
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
@@ -40,35 +40,16 @@
       </div>
     </div>
 
-    <div class="container">
-    	<form class="form-search">
-		    <div style="margin-top:10%; margin-left:12%" class="input-append">
-		        <input type="text" placeholder="What do you want to be?" class="span8 search-query">
-		        <button type="submit" class="btn">Search</button>
-		    </div>
-		</form>
-    	<div class="bannerbottom">
-    		<p><center style="margin-bottom:10px"><a href="#">Filter Results</a></center></a></p>
-    	</div> 
-    	<!-- /container -->
+   <div class="container">
+   	<h2>Results</h1>
+   	<h3>Insert result type here.</h2>
+   	<ul>
+   		<li class="result">Insert list items for all results of this type.</li>
+   	</ul>
 	</div>
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script>
-
-    	$(document).ready(function(){
-    		$("#titlemenu li").click(function(){
-    			$("#titlemenu li").removeClass("active");
-    			$(this).addClass("active");
-    		});
-    	})
-
-
-    </script>
-
   </body>
 </html>
-
-
